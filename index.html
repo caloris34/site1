@@ -8,25 +8,28 @@
     content="Mountain, Latest Travel News, Photo Gallery, Photo Tours, Master Photo Tour, INTUITIVE">
   <meta name="description" content="">
   <title>Welcome to the awe</title>
-  <!-- <link rel="stylesheet" href="css/nicepage.css" media="screen"> -->
+  <link rel="stylesheet" href="css/nicepage.css" media="screen">
   <link rel="stylesheet" href="css/style.css" media="screen">
   <link rel="stylesheet" href="css/Home.css" media="screen">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <script class="u-script" type="text/javascript" src="js/jquery.js" "="" defer=""></script>
     <script class=" u-script" type="text/javascript" src="js/nicepage.js" "="" defer=""></script>
     <meta name=" generator" content="Nicepage 4.17.10, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|PT+Sans:400,400i,700,700i|Black+Han+Sans:400">
-    
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"> -->
 
-  <script type="application/ld+json">{
+  <!-- <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "",
 		"logo": "images/logo.png"
-}</script>
+}</script> -->
   <meta name="theme-color" content="#478ac9">
   <meta property="og:title" content="Home">
   <meta property="og:type" content="website">
@@ -35,11 +38,12 @@
 <body data-home-page="index.html" data-home-page-title="Home" class="u-body u-xl-mode" data-lang="it">
 
   <!-- ========= HEADER ========= -->
-  <header class="u-clearfix u-header u-header" id="sec-d9d8">
+  <!-- <header class="u-clearfix u-header u-header" id="sec-d9d8">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
       <a href="index.html" class="u-image u-logo u-image-1">
         <img src="images/logo.png" class="u-logo-image u-logo-image-1">
       </a>
+
       <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
         <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
           <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
@@ -91,8 +95,68 @@
         </div>
       </nav>
     </div>
-  </header>
+  </header> -->
   <!-- ========= END HEADER ========= -->
+
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- <a href="index.html" class="pull-left visible-md visible-lg"> -->
+          <a href="index.html" class="pull-left">
+            <div id="logo-img"></div>
+          </a>
+          <!-- <a href="index.html" class="logo-img"> -->
+          <!-- <img src="images/Logo/logo.png" class="u-logo-image u-logo-image-1"> -->
+          <!-- </a> -->
+
+          <div class="navbar-brand">
+            <h1>Loris' stories</h1>
+          </div>
+
+          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li id="navHomeButton" class="visible-xs active">
+              <a href="index.html">
+                <span class="glyphicon glyphicon-home"></span> Home</a>
+            </li>
+            <li id="navMenuButton">
+              <a href="snippets/blog-home.html">
+                <span class="glyphicon glyphicon-globe"></span><br class="hidden-xs"> Blog</a>
+            </li>
+            <li>
+              <a href="snippets/thought-home.html">
+                <span class=" glyphicon glyphicon-text-color"></span><br class="hidden-xs"> Thoughts</a>
+            </li>
+            <li>
+              <a href="snippets/photo-home.html">
+                <span class="glyphicon glyphicon-camera"></span><br class="hidden-xs"> Photos</a>
+            </li>
+            <li>
+              <a href="snippets/contacts.html">
+                <span class="glyphicon glyphicon-earphone"></span><br class="hidden-xs"> Contacts</a>
+            </li>
+            <!-- <li id="phone" class="hidden-xs"> -->
+            <!-- <a href="tel:410-602-5008"> -->
+            <!-- <span>410-602-5008</span></a> -->
+            <!-- <div>* We Deliver</div> -->
+            <!-- </li> -->
+          </ul><!-- #nav-list -->
+        </div><!-- .collapse .navbar-collapse -->
+      </div><!-- .container -->
+    </nav><!-- #header-nav -->
+  </header>
+
 
   <section class="u-align-right u-clearfix u-image u-shading u-section-1" id="carousel_7bed">
     <div class="u-clearfix u-sheet u-sheet-1">
@@ -125,7 +189,7 @@
           <div
             class="u-align-center u-blog-post u-border-1 u-border-grey-25 u-container-style u-repeater-item u-video-cover u-white u-repeater-item-1">
             <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-1">
-              <a class="u-post-header-link" href="blog/post-1.html" target="_blank">
+              <a class="u-post-header-link" href="blog/post-5.html" target="_blank">
                 <!--blog_post_image-->
                 <img alt="" class="u-blog-control u-image u-image-default u-image-1" src="images/8ad73f3c.jpeg">
                 <!--/blog_post_image-->
@@ -163,7 +227,7 @@
           <div
             class="u-align-center u-blog-post u-border-1 u-border-grey-25 u-container-style u-repeater-item u-video-cover u-white u-repeater-item-2">
             <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-2">
-              <a class="u-post-header-link" href="blog/post-4.html">
+              <a class="u-post-header-link" href="blog/post-5.html">
                 <!--blog_post_image-->
                 <img alt="" class="u-blog-control u-image u-image-default u-image-2" src="images/68f64b9d.jpeg">
                 <!--/blog_post_image-->
@@ -187,7 +251,7 @@
               <!--/blog_post_metadata-->
               <!--blog_post_header-->
               <h4 class="u-blog-control u-text u-text-3">
-                <a class="u-post-header-link" href="blog/post-4.html">
+                <a class="u-post-header-link" href="blog/post-5.html">
                   <!--blog_post_header_content-->Articolo 5 Intestazione
                   <!--/blog_post_header_content-->
                 </a>
@@ -201,7 +265,7 @@
           <div
             class="u-align-center u-blog-post u-border-1 u-border-grey-25 u-container-style u-repeater-item u-video-cover u-white u-repeater-item-3">
             <div class="u-container-layout u-similar-container u-valign-middle u-container-layout-3">
-              <a class="u-post-header-link" href="blog/post-3.html">
+              <a class="u-post-header-link" href="blog/post-5.html">
                 <!--blog_post_image-->
                 <img alt="" class="u-blog-control u-image u-image-default u-image-3" src="images/0fd3416c.jpeg">
                 <!--/blog_post_image-->
@@ -224,7 +288,7 @@
               <!--/blog_post_metadata-->
               <!--blog_post_header-->
               <h4 class="u-blog-control u-text u-text-4">
-                <a class="u-post-header-link" href="blog/post-3.html">
+                <a class="u-post-header-link" href="blog/post-5.html">
                   <!--blog_post_header_content-->Articolo 4 Intestazione
                   <!--/blog_post_header_content-->
                 </a>
@@ -656,6 +720,11 @@
       <span>Website Builder Software</span>
     </a>.
   </section> -->
+
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/ajax-utils.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
 
