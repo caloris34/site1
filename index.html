@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="it">
+<html style="font-size: 16px;" lang="en">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +9,9 @@
   <meta name="description" content="">
   <title>Welcome to the world</title>
   <!-- <link rel="stylesheet" href="css/nicepage.css" media="screen"> -->
-  <link rel="stylesheet" href="css/style.css" media="screen">
   <!-- <link rel="stylesheet" href="css/Home.css" media="screen"> -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css" media="screen">
   <!-- <script class="u-script" type="text/javascript" src="js/jquery.js" "="" defer=""></script> -->
   <!-- <script class=" u-script" type="text/javascript" src="js/nicepage.js" "="" defer=""></script> -->
   <!-- <meta name=" generator" content="Nicepage 4.17.10, nicepage.com"> -->
@@ -41,6 +41,7 @@
 <body data-home-page="index.html" data-home-page-title="Home" class="u-body u-xl-mode" data-lang="it">
 
   <header>
+
     <nav id="header-nav" class="navbar navbar-default">
       <div class="container">
         <div class="navbar-header">
@@ -60,72 +61,105 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-
-          <div id="collapsable-nav" class="collapse navbar-collapse">
-            <ul id="nav-list" class="nav navbar-nav navbar-right">
-              <!-- #nav-list -->
-              <li id="navMenuButton">
-                <a href="snippets/blog-home.html">
-                  <span class="fa-solid fa-earth-americas"></span><br class="hidden-xs"> Blog</a>
-                <!-- <span class="glyphicon glyphicon-globe"></span><br class="hidden-xs"> Blog</a> -->
-              </li>
-              <li>
-                <a href="snippets/thought-home.html">
-                  <span class=" fa-solid fa-thought-bubble"></span><br class="hidden-xs"> Thoughts</a>
-                </a>
-              </li>
-              <li>
-                <a href="snippets/photo-home.html">
-                  <span class="fa-solid fa-panorama"></span><br class="hidden-xs"> Photos</a>
-              </li>
-              <li>
-                <a href="snippets/aboutme.html">
-                  <span class="fa-regular fa-person-hiking"></span><br class="hidden-xs"> About me</a>
-              </li>
-              <li>
-                <a href="https://wa.me/33784155293" target="_blank">
-                  <span class="fa-brands fa-whatsapp"></span><br class="hidden-xs"> Whatsapp me!</a>
-              </li>
-            </ul><!-- #nav-list -->
-          </div><!-- .collapse .navbar-collapse -->
         </div>
+
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <!-- #nav-list -->
+            <li id="navMenuButton">
+              <a href="snippets/blog-home.html">
+                <span class="fa-solid fa-earth-americas"></span><br class="hidden-xs"> Blog</a>
+              <!-- <span class="glyphicon glyphicon-globe"></span><br class="hidden-xs"> Blog</a> -->
+            </li>
+            <li>
+              <a href="snippets/thought-home.html">
+                <span class="fa-solid fa-book"></span><br class="hidden-xs"> Thoughts</a>
+            </li>
+            <li>
+              <a href="snippets/photo-home.html">
+                <span class="fa-solid fa-panorama"></span><br class="hidden-xs"> Photos</a>
+            </li>
+            <li>
+              <a href="snippets/aboutme.html">
+                <span class="fa-regular fa-question"></span><br class="hidden-xs"> About me</a>
+            </li>
+            <!-- <li> -->
+            <!-- <a href="https://wa.me/33784155293" target="_blank"> -->
+            <!-- <span class="fa-brands fa-whatsapp"></span><br class="hidden-xs"> Whatsapp me!</a> -->
+            <!-- </li> -->
+          </ul><!-- #nav-list -->
+        </div><!-- .collapse .navbar-collapse -->
       </div><!-- .container -->
     </nav><!-- #header-nav -->
+
   </header>
 
 
-  <section>
+
+
+  <div id="main-content" class="container">
+
+    <div class="row">
+      <div class="column left">Prima colonna</div>
+      <div class="column right">Seconda colonna</div>
+    </div>
+
     Ciao!!!
-    <i class="fa-solid fa-earth-americas"></i>
-  </section>
+
+    <!-- <a href="it/index.html" hreflang="it">Italian</a> -->
+
+
+
+    <br>
+
+    <div id="home-tiles" class="row">
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <a href="https://goo.gl/maps/24LQ38dypDEpba2G8" target="_blank">
+          <div id="map-tile">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d91614.1088999946!2d1.3628024566556216!3d43.60080618530801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb6fec7552ff%3A0x406f69c2f411030!2sToulouse!5e1!3m2!1sen!2sfr!4v1663274215152!5m2!1sen!2sfr"
+              width="266" height="200" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- <span>map</span> -->
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
 
   <footer class="panel-footer">
     <div class="container">
-      <div class="row">
-        <section id="hours" class="col-sm-4">
-          <span>Hours:</span><br>
-          Sun-Thurs: 11:15am - 10:00pm<br>
-          Fri: 11:15am - 2:30pm<br>
-          Saturday Closed
+      <div id="socials" class="row">
+
+        <section id="instagram" class="col-sm-4 text-center">
+          <span>
+            <a href="https://www.instagram.com/ca.loriss/" target="_blank" class="fa-brands fa-instagram fa-2xl"></a>
+          </span><br>
+          Follow me!
           <hr class="visible-xs">
         </section>
-        <section id="address" class="col-sm-4">
-          <span>Address:</span><br>
-          7105 Reisterstown Road<br>
-          Baltimore, MD 21215
-          <p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliveries.</p>
+
+        <section id="youtube" class="col-sm-4 text-center">
+          <span>
+            <a href="https://www.youtube.com/channel/UCdrvXOBU1C9uyMoRsBb5_5Q/" target="_blank"
+              class="fa-brands fa-youtube fa-2xl"></a>
+          </span><br>
+          Subscribe!<br>
           <hr class="visible-xs">
         </section>
-        <section id="testimonials" class="col-sm-4">
-          <p>"The best Chinese restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
-          <p>"Amazing food! Great service! Couldn't ask for more! I'll be back again and again!"</p>
-          <a href="#" target="_blank" class="fa-brands fa-facebook fa-lg"></a>
-          <a href="https://www.instagram.com/ca.loriss/" target="_blank" class="fa-brands fa-instagram fa-lg"></a>
-          <a href="https://www.youtube.com/channel/UCdrvXOBU1C9uyMoRsBb5_5Q/" target="_blank"
-            class="fa-brands fa-youtube fa-lg"></a>
+
+        <section id="whatsapp" class="col-sm-4 text-center">
+          <span>
+            <a href="https://wa.me/33784155293" target="_blank" class="fa-brands fa-whatsapp fa-2xl"></a>
+          </span><br>
+          Whatsapp me!<br>
+          <!-- <a href="#" target="_blank" class="fa-brands fa-facebook fa-lg"></a> -->
         </section>
+
       </div>
-      <div class="text-center">&copy; Copyright L.C. 2022</div>
+      <div class="mycopyright text-center">&copy; 2023 L.C.</div>
     </div>
   </footer>
   <!-- 

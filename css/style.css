@@ -1,7 +1,8 @@
 body {
   font-size: 16px;
-  color: #fff;
-  /* font-family: 'Oxygen', sans-serif; */
+  /* color: #fff; */
+  /* margin: 0; */
+  font-family: 'Oxygen', sans-serif;
 }
 
 :root {
@@ -10,7 +11,23 @@ body {
   --my-blue: #293FCC;
 }
 
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.right {
+  width: 35%;
+  border: 2px red solid;
+}
+
+.left {
+  border: 2px blue solid;
+  width: 65%;
+}
+
 /** HEADER **/
+
 #header-nav {
   /* background-color: #f6b319; */
   background-color: #000000;
@@ -19,6 +36,10 @@ body {
   padding: 5px;
 }
 
+.container {
+  /* margin-left: 30px; */
+  /* margin-right: 30px; */
+}
 
 /* LOGO */
 
@@ -59,6 +80,9 @@ body {
   text-decoration: none;
 }
 
+/* END Website name */
+/* Icon Menu */
+
 #nav-list {
   margin-top: 10px;
 }
@@ -69,7 +93,7 @@ body {
 }
 
 #nav-list a:hover {
-  background: #E7E7E7;
+  background: #adadad;
   color: black;
 }
 
@@ -77,26 +101,45 @@ body {
   font-size: 1.8em;
 }
 
+/* Warning! con media XS scazza... */
+/* .navbar-header { */
+/* position: absolute; */
+/* } */
+
 .navbar-header button.navbar-toggle,
 .navbar-header .icon-bar {
   border: 1px solid white;
-  /* border: 1px solid var(--my-brown); */
+}
+
+.navbar-header button.navbar-toggle:hover .icon-bar {
+  /* background-color: #fff; */
+  border-color: #000;
+}
+
+.navbar-header button.navbar-toggle:focus .icon-bar {
+  background-color: #000;
+  border-color: #000;
+}
+
+#navbarToggle {
+  /* position: relative; */
+  /* top: 50%; */
+  transform: translateY(50%);
+  clear: right;
+  padding: 10px;
+  /* margin: 8px; */
+  /* height: 30px; */
+  /* top: calc(50% - 15px); */
 }
 
 .navbar-header button.navbar-toggle {
   clear: both;
-  margin-top: -30px;
+  /* margin-top: -40px; */
 }
 
-.fa-solid .fa-regular {
-  color: white;
-  /* font-size: 48px; */
-}
-
-.fa-whatsapp {
-  /* background-color: #ece5dd; */
-  color: #075e54;
-  font-size: 48px;
+.fa-solid,
+.fa-regular {
+  padding-bottom: 10px;
 }
 
 /* END HEADER */
@@ -104,42 +147,47 @@ body {
 
 
 
-/* FOOTER */
+/* ==== FOOTER =============================================== */
+
 .panel-footer {
   margin-top: 30px;
   padding-top: 35px;
   padding-bottom: 30px;
   background-color: #000;
-  /* color: white; */
+  color: white;
   border-top: 0;
+  font-style: italic;
 }
 
 .panel-footer div.row {
   margin-bottom: 35px;
 }
 
-#hours,
-#address {
-  line-height: 2;
+#socials a:hover,
+#socials a:focus {
+  text-decoration: none;
+  color: inherit
 }
 
-#hours>span,
-#address>span {
-  font-size: 1.3em;
+.fa-brands {
+  padding-bottom: 20px;
 }
 
-#address p {
-  color: #557c3e;
-  font-size: .8em;
-  line-height: 1.8;
+.fa-instagram {
+  color: #C13584;
 }
 
-#testimonials {
-  font-style: italic;
+.fa-youtube {
+  color: #FF0000;
 }
 
-#testimonials p:nth-child(2) {
-  margin-top: 25px;
+.fa-whatsapp {
+  color: #075e54;
+  /* font-size: 48px; */
+}
+
+.mycopyright {
+  font-size: 0.6em;
 }
 
 /* END FOOTER */
@@ -154,79 +202,62 @@ body {
 
 /****************************************** Large devices only ******************************************/
 @media (min-width: 1200px) {
-  .container .jumbotron {
-    /* background: url('../images/jumbotron_1200.jpg') no-repeat; */
-    /* height: 675px; */
-  }
+  /* .container .jumbotron { */
+  /* background: url('../images/jumbotron_1200.jpg') no-repeat; */
+  /* height: 675px; */
+  /* } */
 }
 
 /****************************************** Medium devices only ******************************************/
 @media (min-width: 992px) and (max-width: 1199px) {
 
-  /* Header */
-  #logo-img {
-    /* background: url('../images/restaurant-logo_medium.png') no-repeat; */
-    /* width: 100px; */
-    /* height: 100px; */
-    /* margin: 5px 5px 5px 0; */
-  }
-
-  /* End Header */
-
-  /* Home Page */
-  .container .jumbotron {
-    /* background: url('../images/jumbotron_992.jpg') no-repeat; */
-    /* height: 558px; */
-  }
-
-  /* End Home Page */
+  /* .container .jumbotron { */
+  /* background: url('../images/jumbotron_992.jpg') no-repeat; */
+  /* height: 558px; */
+  /* } */
 }
 
 /****************************************** Small devices only ******************************************/
 @media (min-width: 768px) and (max-width: 991px) {
 
-  /* Home Page */
-  .container .jumbotron {
-    /* background: url('../images/jumbotron_768.jpg') no-repeat; */
-    /* height: 432px; */
-  }
+  /* .container .jumbotron { */
+  /* background: url('../images/jumbotron_768.jpg') no-repeat; */
+  /* height: 432px; */
+  /* } */
 
-  /* End Home Page */
 }
 
 /****************************************** Extra small devices only ******************************************/
 @media (max-width: 767px) {
 
   /* Header */
+
   .navbar-brand {
     padding-top: 10px;
     height: 80px;
   }
 
+  /* Restaurant name */
   .navbar-brand h1 {
-    /* Restaurant name */
     padding-top: 10px;
     font-size: 5vw;
-    /* 1vw = 1% of viewport width */
+    1vw=1% of viewport width
   }
 
-  #collapsable-nav a {
-    /* Collapsed nav menu text */
-    font-size: 1.2em;
-  }
+  /* Collapsed nav menu text */
+  /* #collapsable-nav { */
+  /* clear: right */
+  /* } */
 
-  #collapsable-nav a span {
-    /* Collapsed nav menu glyph */
-    font-size: 1em;
-    margin-right: 5px;
-  }
+  /* #collapsable-nav a { */
+  /* font-size: 1.2em; */
+  /* } */
 
-  #xs-deliver {
-    margin-top: 5px;
-    font-size: .7em;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-  }
+  /* Collapsed nav menu glyph */
+  /* #collapsable-nav a span { */
+  /* font-size: 1em; */
+  /* margin-right: 5px; */
+  /* } */
 
   /* End Header */
 
@@ -249,8 +280,8 @@ body {
 
   /* Home Page */
   .container .jumbotron {
-    margin-top: 30px;
-    padding: 0;
+    /* margin-top: 30px; */
+    /* padding: 0; */
   }
 }
 
@@ -259,27 +290,12 @@ body {
 @media (max-width: 479px) {
 
   /* Header */
-  .navbar-brand h1 {
-    /* Restaurant name */
-    padding-top: 5px;
-    font-size: 6vw;
-  }
+  /* /* .navbar-brand h1 { */
+  /* Restaurant name */
+  /* padding-top: 5px; */
+  /* font-size: 6vw; */
+  /* } */
 
   /* End Header */
 
-  /* Home page */
-  #menu-tile,
-  #specials-tile {
-    width: 280px;
-    margin: 0 auto 15px;
-  }
-
-  .col-xxs-12 {
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    float: left;
-    width: 100%;
-  }
 }

@@ -1,3 +1,6 @@
+
+
+
 $(function () { // Same as document.addEventListener("DOMContentLoaded"...
 
     // Same as document.querySelector("#navbarToggle").addEventListener("blur",...
