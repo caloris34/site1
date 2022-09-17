@@ -229,6 +229,11 @@ body {
 
 /****************************************** Large devices only ******************************************/
 @media (min-width: 1200px) {
+
+  .navbar-header {
+    position: absolute;
+  }
+
   .container .jumbotron {
     /* background: url('../images/DJI_waves.jpg') no-repeat; */
     /* width: 100%; */
@@ -240,6 +245,10 @@ body {
 /****************************************** Medium devices only ******************************************/
 @media (min-width: 992px) and (max-width: 1199px) {
 
+  .navbar-header {
+    position: absolute;
+  }
+
   .container .jumbotron {
     /* background: url('../images/DJI_waves.jpg') no-repeat; */
     /* height: 558px; */
@@ -248,6 +257,10 @@ body {
 
 /****************************************** Small devices only ******************************************/
 @media (min-width: 768px) and (max-width: 991px) {
+
+  .navbar-header {
+    position: absolute;
+  }
 
   .container .jumbotron {
     /* background: url('../images/DJI_waves.jpg') no-repeat; */
@@ -274,19 +287,19 @@ body {
   }
 
   /* Collapsed nav menu text */
-  /* #collapsable-nav { */
-  /* clear: right */
-  /* } */
+  #collapsable-nav {
+    clear: right
+  }
 
-  /* #collapsable-nav a { */
-  /* font-size: 1.2em; */
-  /* } */
+  #collapsable-nav a {
+    font-size: 1.2em;
+  }
 
   /* Collapsed nav menu glyph */
-  /* #collapsable-nav a span { */
-  /* font-size: 1em; */
-  /* margin-right: 5px; */
-  /* } */
+  #collapsable-nav a span {
+    font-size: 1em;
+    margin-right: 5px;
+  }
 
   /* End Header */
 
