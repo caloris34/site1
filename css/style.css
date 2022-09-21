@@ -367,3 +367,15 @@ header {
   /* End Header */
 
 }
+
+
+
+
+/* ABOUT ME HTML */
+
+.about-me {
+  font-style: italic;
+  text-align: justify;
+  text-justify: inter-word;
+  ;
+}
