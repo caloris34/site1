@@ -1,49 +1,133 @@
+/**
+ * ---------------------------------------
+ * This demo was created using amCharts 5.
+ *
+ * For more information visit:
+ * https://www.amcharts.com/
+ *
+ * Documentation is available at:
+ * https://www.amcharts.com/docs/v5/
+ * ---------------------------------------
+ */
+
+// Create root and chart
+var root = am5.Root.new("chartdiv");
+
+// Set themes
+root.setThemes([
+    am5themes_Animated.new(root)
+]);
+
+var chart = root.container.children.push(
+    am5map.MapChart.new(root, {
+        panX: "rotateX",
+        projection: am5map.geoNaturalEarth1(),
+        wheelY: "none",
+        maxPanOut: 0.
+    })
+);
+
+var backgroundSeries = chart.series.unshift(
+    am5map.MapPolygonSeries.new(root, {})
+);
+
+// sea color
+backgroundSeries.mapPolygons.template.setAll({
+    fill: am5.color(0xd4f1f9),
+    stroke: am5.color(0xd4f1f9),
+});
+
+backgroundSeries.data.push({
+    geometry: am5map.getGeoRectangle(90, 180, -90, -180)
+});
+
+
+// Create curtain + message to show when wheel is used over chart without CTRL
+var overlay = root.container.children.push(am5.Container.new(root, {
+    width: am5.p100,
+    height: am5.p100,
+    layer: 100,
+    visible: false
+}));
+
+var curtain = overlay.children.push(am5.Rectangle.new(root, {
+    width: am5.p100,
+    height: am5.p100,
+    fill: am5.color(0x000000),
+    fillOpacity: 0.3
+}));
+
+var message = overlay.children.push(am5.Label.new(root, {
+    text: "Use CTRL + Scroll to zoom",
+    fontSize: 30,
+    x: am5.p50,
+    y: am5.p50,
+    centerX: am5.p50,
+    centerY: am5.p50
+}));
+
+chart.events.on("wheel", function (ev) {
+    if (ev.originalEvent.ctrlKey) {
+        ev.originalEvent.preventDefault();
+        chart.set("wheelY", "zoom");
+    }
+    else {
+        chart.set("wheelY", "none");
+        overlay.show();
+        overlay.setTimeout(function () {
+            overlay.hide()
+        }, 800);
+    }
+});
+
+// Create polygon series
+var polygonSeries = chart.series.push(
+    am5map.MapPolygonSeries.new(root, {
+        // geoJSON: am5geodata_worldLow,
+        geoJSON: am5geodata_worldHigh,
+        // geoJSON: am5geodata_peruHigh,
+        exclude: ["AQ", "FK", "GS", "TF", "HM"],
+        fill: am5.color(0x095256)
+    })
+);
+
+polygonSeries.mapPolygons.template.setAll({
+    // tooltipText: "{name}",
+    tooltipText: "{id}",
+    interactive: true
+});
+
+// Hover color
+polygonSeries.mapPolygons.template.states.create("hover", {
+    fill: am5.color(0x677935)
+});
+
+// Add all blogs URLs
+polygonSeries.data.setAll([
+    { id: "BR", description: "https://www.youtube.com/" },
+    { id: "US-AK", value: 626932 },
+    { id: "US-WI", value: 5363675 },
+    { id: "US-WY", value: 493782 }
+]);
+
+// polygonSeries.mapPolygons.template.events.on("click", function (ev) {
+//     console.log("something happened ", ev);
+// }, this);
+
+// polygonSeries.mapPolygons.template.states.create("hit", {
+// fill: am5.color(0xFF0000)
+// });
+// polygonSeries.events.on("hit", function (ev) {
 
 
 
-/* Create map instance */
-var chart = am4core.create("chartdiv", am4maps.MapChart);
 
-/* Set map definition */
-chart.geodata = am4geodata_worldLow;
-
-
-// Set projection
-chart.projection = new am4maps.projections.Miller();
-
-// Create map polygon series
-var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
-
-// Make map load polygon (like country names) data from GeoJSON
-polygonSeries.useGeodata = true;
-
-// Add some custom data
-polygonSeries.data = [{
-    "id": "US",
-    "color": am4core.color("#3F4B3B"),
-    "description": "The U.S. is a country of 50 states covering a vast swath of North America, with Alaska in the northwest and Hawaii extending the nation’s presence into the Pacific Ocean. Major Atlantic Coast cities are New York, a global finance and culture center, and capital Washington, DC. Midwestern metropolis Chicago is known for influential architecture and on the west coast, Los Angeles' Hollywood is famed for filmmaking."
-}, {
-    "id": "CA",
-    "color": am4core.color("#3F4B3B"),
-    "description": "Canada is a North American country stretching from the U.S. in the south to the Arctic Circle in the north. Major cities include massive Toronto, west coast film centre Vancouver, French-speaking Montréal and Québec City, and capital city Ottawa. Canada's vast swaths of wilderness include lake-filled Banff National Park in the Rocky Mountains. It's also home to Niagara Falls, a famous group of massive waterfalls."
-}, {
-    "id": "MX",
-    "color": am4core.color("#3F4B3B"),
-    "description": "Mexico is a country between the U.S. and Central America that's known for its Pacific and Gulf of Mexico beaches and its diverse landscape of mountains, deserts and jungles. Ancient ruins such as Teotihuacán and the Mayan city of Chichén Itzá are scattered throughout the country, as are Spanish colonial-era towns. In capital Mexico City, upscale shops, renowned museums and gourmet restaurants cater to modern life."
-}]
-
-// Configure series
-var polygonTemplate = polygonSeries.mapPolygons.template;
-polygonTemplate.tooltipText = "{name}";
-polygonTemplate.fill = am4core.color("#5CAB7D");
-polygonTemplate.propertyFields.fill = "color";
-polygonTemplate.events.on("hit", function (ev) {
+polygonSeries.mapPolygons.template.events.on("click", function (ev) {
     var data = ev.target.dataItem.dataContext;
     var info = document.getElementById("info");
-    var url = "https://stackoverflow.com/questions/13071967/adding-an-onclick-function-to-go-to-url-in-javascript";
     if (data.name === "Brazil") {
-        window.location = url;
-        // window.open(url);
+        window.location = data.description;
+        // window.open(data.description); // to open in another window
     }
     else {
         info.innerHTML = "<h3>" + data.name + " (" + data.id + ")</h3>";
@@ -55,13 +139,3 @@ polygonTemplate.events.on("hit", function (ev) {
         }
     }
 });
-
-// Create hover state and set alternative fill color
-var hs = polygonTemplate.states.create("hover");
-hs.properties.fill = am4core.color("#5A9367");
-
-// Remove Antarctica
-polygonSeries.exclude = ["AQ"];
-
-// Add zoom control
-chart.zoomControl = new am4maps.ZoomControl();

@@ -7,12 +7,18 @@ var chart = am4core.create("chartdiv", am4maps.MapChart);
 /* Set map definition */
 chart.geodata = am4geodata_worldLow;
 
-
 // Set projection
+// chart.projection = new am4maps.projections.Mercator();
 chart.projection = new am4maps.projections.Miller();
+// chart.projection = new am4maps.projections.Orthographic();
 
 // Create map polygon series
 var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+
+// polygonSeries.panX = "rotateX"; 
+// polygonSeries.panX = "translateX";
+
+
 
 // Make map load polygon (like country names) data from GeoJSON
 polygonSeries.useGeodata = true;
@@ -21,7 +27,7 @@ polygonSeries.useGeodata = true;
 polygonSeries.data = [{
     "id": "US",
     "color": am4core.color("#3F4B3B"),
-    "description": "The U.S. is a country of 50 states covering a vast swath of North America, with Alaska in the northwest and Hawaii extending the nation’s presence into the Pacific Ocean. Major Atlantic Coast cities are New York, a global finance and culture center, and capital Washington, DC. Midwestern metropolis Chicago is known for influential architecture and on the west coast, Los Angeles' Hollywood is famed for filmmaking."
+    "description": "https://stackoverflow.com/questions/13071967/adding-an-onclick-function-to-go-to-url-in-javascript"
 }, {
     "id": "CA",
     "color": am4core.color("#3F4B3B"),
@@ -35,15 +41,15 @@ polygonSeries.data = [{
 // Configure series
 var polygonTemplate = polygonSeries.mapPolygons.template;
 polygonTemplate.tooltipText = "{name}";
-polygonTemplate.fill = am4core.color("#5CAB7D");
+// polygonTemplate.fill = am4core.color("#5CAB7D");
+polygonTemplate.fill = am4core.color("#000000");
 polygonTemplate.propertyFields.fill = "color";
 polygonTemplate.events.on("hit", function (ev) {
     var data = ev.target.dataItem.dataContext;
     var info = document.getElementById("info");
-    var url = "https://stackoverflow.com/questions/13071967/adding-an-onclick-function-to-go-to-url-in-javascript";
-    if (data.name === "Brazil") {
-        window.location = url;
-        // window.open(url);
+    if (data.name === "United States") {
+        // window.location = data.description;
+        window.open(data.description); // to open in another window
     }
     else {
         info.innerHTML = "<h3>" + data.name + " (" + data.id + ")</h3>";
@@ -58,7 +64,8 @@ polygonTemplate.events.on("hit", function (ev) {
 
 // Create hover state and set alternative fill color
 var hs = polygonTemplate.states.create("hover");
-hs.properties.fill = am4core.color("#5A9367");
+// hs.properties.fill = am4core.color("#5A9367");
+hs.properties.fill = am4core.color("#FF0000");
 
 // Remove Antarctica
 polygonSeries.exclude = ["AQ"];

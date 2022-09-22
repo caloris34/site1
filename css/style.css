@@ -137,6 +137,14 @@ header {
 
 /* MAIN CONTENT */
 
+
+#chartdiv {
+  width: 100%;
+  height: 550px;
+  background-color: #C13584;
+}
+
+
 .fluid {
   text-align: center;
 }
