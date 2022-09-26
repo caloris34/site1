@@ -34,11 +34,11 @@
   <!-- <?php include('header.php'); ?> -->
 
   <header>
-    <nav id="header-nav" class="navbar py-1 navbar-dark navbar-expand-xs">
+    <nav id="header-nav" class="navbar navbar-dark navbar-expand-xs">
       <div id="container-header" class="container-fluid">
 
-        <!-- <a href="index.html" id="navbar-title" class="navbar-brand">Loris' Stories</< /a> -->
-        <h1><a href="index.html" id="navbar-title" class="navbar-brand mx-auto">Loris' Stories</h1></a>
+        <a href="index.html" id="navbar-title" class="navbar-brand mx-auto py-0">Loris' Stories </a>
+        <!-- <h1><a href="index.html" id="navbar-title" class="navbar-brand mx-auto">Loris' Stories</h1></a> -->
 
         <button type="button" class="navbar-toggler custom-toggler" data-bs-toggle="collapse"
           data-bs-target="#navbarCollapse">
@@ -47,20 +47,19 @@
 
         <div id="navbarCollapse" class="collapse navbar-collapse">
           <div class="navbar-nav navbar-right">
-            <a href="snippets/blog-home.html" class="nav-item nav-link           fa-solid fa-earth-americas"> <br
-                class="hidden-xs">Blog</a>
-            <a href="snippets/thought-home.html" class="nav-item nav-link fa-solid fa-book"><br class="visible-xs">
+            <a href="snippets/blog-home.html" class="nav-item nav-link           fa-solid fa-earth-americas"> Blog</a>
+            <a href="snippets/thought-home.html" class="nav-item nav-link fa-solid fa-book">
               Thoughts</a>
 
-            <a href="snippets/photo-home.html" class="nav-item nav-link fa-solid fa-panorama"><br class="hidden-xs">
+            <a href="snippets/photo-home.html" class="nav-item nav-link fa-solid fa-panorama">
               Photos</a>
 
-            <a href="snippets/aboutme.html" class="nav-item nav-link fa-regular fa-question"><br class="hidden-xs">
+            <a href="snippets/aboutme.html" class="nav-item nav-link fa-regular fa-question">
               About me</a>
           </div> <!-- navbar-nav -->
         </div> <!-- collapsable-nav -->
 
-      </div> <!-- contained-fluid -->
+        <!-- </div> contained-fluid -->
     </nav><!-- #header-nav -->
   </header>
 
@@ -85,29 +84,16 @@
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
     <!-- This is the map!! -->
-    <div class="card card-bordered">
-      <div class="card-body">
-        <div id="chartdiv" style="height: 500px;"></div>
-      </div>
+    <div class="map-container">
+      <div id="chartdiv"></div>
     </div>
-
-
-
-    <!-- <iframe src="https://uploads.knightlab.com/storymapjs/49d38c75a880f118b797c6d7911a186f/mymap/index.html"      frameborder="0" width="100%" height="800"></iframe> -->
-
-
-    <!-- <div class="contain-map">
-      <div class="myDynamicMap">
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=19NW4CdDbNoPYHoIYIfa4Yxe7Mdd3W-o&ehbc=2E312F"
-          width="100%" height="480"></iframe>
-      </div>
-    </div> -->
 
     <!-- <div class="jumbotron"> -->
     <!-- <img src="images/DJI_waves.jpg" alt="DJI waves" class="img-responsive visible-xs"> -->
     <!-- <img src="images/DJI_waves.jpg" alt="DJI waves" class="djiw visible-md visible-lg visible-sm"> -->
     <!-- </div> -->
 
+    <br>
     <!-- Spotify! -->
     <iframe style="border-radius:12px"
       src="https://open.spotify.com/embed/track/7oxspkUs3nZe1tf4VZGwq3?utm_source=generator" width="50%" height="80"

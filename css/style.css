@@ -16,15 +16,15 @@ body {
 
 /** HEADER **/
 
+#container-header {
+  margin: -10px 20px -10px 20px;
+}
+
 #header-nav {
   background-color: var(--my-darkblue);
   border-radius: 0;
   border: 0;
   padding: 10spx;
-}
-
-#container-header {
-  /* margin: 5px 10px 5px 35%; */
 }
 
 /* Website name */
@@ -37,17 +37,11 @@ body {
   font-family: 'myTitleFont';
   color: #ffffff;
   text-shadow: 1px 1px 1px var(--visited-country);
-  font-size: 1.5em;
-  /* text-align: center; */
+  font-size: 3.5em;
   font-style: italic;
-  padding: 10px;
-  /* text-decoration: none; */
-}
-
-h1 {
-  margin: 0;
-  /* width: 100%; */
   text-align: center;
+  /* padding: 10px; */
+  /* text-decoration: none; */
 }
 
 /* Remove blue link colors and highlight */
@@ -65,7 +59,7 @@ h1 {
 /* Icon Menu */
 
 .nav-item {
-  margin-top: 10px;
+  /* margin-top: 10px; */
   color: #fff;
   text-align: center;
   font-size: 1.em;
@@ -109,14 +103,26 @@ h1 {
 
 /* MAIN CONTENT */
 
-#chartdiv {
-  width: 100%;
-  height: auto;
-}
-
 #main-content {
   text-align: center;
+  padding: 0;
 }
+
+.map-container {
+  width: 100%;
+  /* height: 500px; */
+  /* padding: 5px; */
+  /* text-align: center; */
+}
+
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}
+
+
+
+
 
 /* END MAIN CONTENT */
 
@@ -277,10 +283,7 @@ h1 {
 
 
 
-/* .myMap {
-  padding: 5px;
-  text-align: center;
-}
+/*
 
 .mapTile {
   width: 100%;

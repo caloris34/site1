@@ -30,16 +30,20 @@ root.setThemes([
 var chart = root.container.children.push(
     am5map.MapChart.new(root, {
         panX: "rotateX",
+        homeZoomLevel: 1.5,
         projection: am5map.geoNaturalEarth1(),
         wheelY: "none",
         maxPanOut: 0.0
     })
 );
 
+// Appear with fade-in
+chart.appear(1000, 100);
 
 // Background
 chart.chartContainer.set("background", am5.Rectangle.new(root, {
     fill: am5.color(color_background),
+    fill: am5.color(0xffffff),
     fillOpacity: 1
 }));
 
@@ -112,12 +116,19 @@ var polygonSeries = chart.series.push(
         fill: am5.color(color_map)
     })
 );
-
 polygonSeries.mapPolygons.template.setAll({
     tooltipText: "{name}",
     templateField: "polygonSettings",
     interactive: true
 })
+
+
+// Zoom at homePoint
+polygonSeries.events.on("datavalidated", function () {
+    chart.goHome();
+});
+
+
 
 // Hover color
 polygonSeries.mapPolygons.template.states.create("hover", {
