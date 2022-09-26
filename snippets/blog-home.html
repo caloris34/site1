@@ -1,7 +1,5 @@
 <!--  -->
 
-<!-- ABOUT ME HTML -->
-
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en">
 
@@ -13,11 +11,12 @@
     <meta name="description" content="">
     <meta property="og:title" content="Home">
     <meta property="og:type" content="website">
-    <title>Welcome to the world</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <title>Where to?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="bootstrap-5.2.1-dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="../css/style.css" media="screen">
-    <!-- <script class="u-script" type="text/javascript" src="js/jquery.js" "="" defer=""></script> -->
-    <!-- <script class=" u-script" type="text/javascript" src="js/nicepage.js" "="" defer=""></script> -->
+    <link rel="stylesheet" href="../css/style-bloghome.css" media="screen">
     <link id="u-theme-google-font" rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet"
@@ -32,78 +31,61 @@
 </head>
 
 
-<body data-home-page="aboutme.html" data-home-page-title="Home" class="u-body u-xl-mode" data-lang="en">
+<body>
 
     <header>
-        <nav id="header-nav" class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
+        <nav id="header-nav" class="navbar py-1 navbar-dark navbar-expand-xs">
+            <div id="container-header" class="container-fluid">
 
-                    <a href="../index.html" class="pull-left" id="logo-img">
-                        <img src="../images/Logo/logo.png">
-                    </a>
+                <!-- <a href="index.html" id="navbar-title" class="navbar-brand">Loris' Stories</< /a> -->
+                <h1><a href="../index.html" id="navbar-title" class="navbar-brand mx-auto">Loris' Stories</h1></a>
 
-                    <div class="navbar-brand">
-                        <h1>Loris' stories</h1>
-                    </div>
+                <button type="button" class="navbar-toggler custom-toggler" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                    <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#collapsable-nav" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
+                <div id="navbarCollapse" class="collapse navbar-collapse">
+                    <div class="navbar-nav navbar-right">
+                        <a href="blog-home.html" class="nav-item nav-link active          fa-solid fa-earth-americas">
+                            <br class="hidden-xs">Blog</a>
+                        <a href="thought-home.html" class="nav-item nav-link fa-solid fa-book"><br class="visible-xs">
+                            Thoughts</a>
 
-                <div id="collapsable-nav" class="collapse navbar-collapse">
-                    <ul id="nav-list" class="nav navbar-nav navbar-right">
-                        <!-- #nav-list -->
-                        <li id="navMenuButton">
-                            <a href="../snippets/blog-home.html">
-                                <span class="fa-solid fa-earth-americas"></span><br class="hidden-xs"> Blog</a>
-                            <!-- <span class="glyphicon glyphicon-globe"></span><br class="hidden-xs"> Blog</a> -->
-                        </li>
-                        <li>
-                            <a href="../snippets/thought-home.html">
-                                <span class="fa-solid fa-book"></span><br class="hidden-xs"> Thoughts</a>
-                        </li>
-                        <li>
-                            <a href="../snippets/photo-home.html">
-                                <span class="fa-solid fa-panorama"></span><br class="hidden-xs"> Photos</a>
-                        </li>
-                        <li>
-                            <a href="../snippets/aboutme.html">
-                                <span class="fa-regular fa-question"></span><br class="hidden-xs"> About me</a>
-                        </li>
-                        <!-- <li> -->
-                        <!-- <a href="https://wa.me/33784155293" target="_blank"> -->
-                        <!-- <span class="fa-brands fa-whatsapp"></span><br class="hidden-xs"> Whatsapp me!</a> -->
-                        <!-- </li> -->
-                    </ul><!-- #nav-list -->
-                </div><!-- .collapse .navbar-collapse -->
-            </div><!-- .container -->
+                        <a href="photo-home.html" class="nav-item nav-link fa-solid fa-panorama"><br class="hidden-xs">
+                            Photos</a>
+
+                        <a href="aboutme.html" class="nav-item nav-link fa-regular fa-question"><br class="hidden-xs">
+                            About me</a>
+                    </div> <!-- navbar-nav -->
+                </div> <!-- collapsable-nav -->
+
+            </div> <!-- contained-fluid -->
         </nav><!-- #header-nav -->
     </header>
 
 
-    <div id="main-content" class="container">
+    <div id="bloghome-content" class="container">
 
-        Presentation
+        <div class="col-sm-6">
+            <img src="../images/blog/chefchaouen.JPG" alt="Chefchaouen" width="100%">
+        </div> Presentation Latest posts with photosss
 
-        Latest posts with photos
+        <br>
 
-        <!-- whatsapp -->
+        <a href="blog/0_genesis.html"> Genesis</a>, where it all started!
+
+        <br><a href="blog/Peru.html"> Peru</a>, in the Andes!
 
 
-        <!-- where am I? > gmaps -->
     </div>
+
 
     <footer class="panel-footer">
         <div class="container">
             <div id="socials" class="row">
 
-                <section id="instagram" class="col-xs-4 text-center">
+                <section id="instagram" class="col-sm-4 text-center">
                     <span>
                         <a href="https://www.instagram.com/ca.loriss/" target="_blank"
                             class="fa-brands fa-instagram fa-2xl"></a>
@@ -111,7 +93,7 @@
                     Follow me!
                 </section>
 
-                <section id="youtube" class="col-xs-4 text-center">
+                <section id="youtube" class="col-sm-4 text-center">
                     <span>
                         <a href="https://www.youtube.com/channel/UCdrvXOBU1C9uyMoRsBb5_5Q/" target="_blank"
                             class="fa-brands fa-youtube fa-2xl"></a>
@@ -119,7 +101,7 @@
                     Subscribe!<br>
                 </section>
 
-                <section id="whatsapp" class="col-xs-4 text-center">
+                <section id="whatsapp" class="col-sm-4 text-center">
                     <span>
                         <a href="https://wa.me/33784155293" target="_blank" class="fa-brands fa-whatsapp fa-2xl"></a>
                     </span><br>
@@ -128,14 +110,15 @@
                 </section>
 
             </div>
-            <div class="mycopyright text-center">&copy; 2023 L.C.</div>
+            <div class="mycopyright text-center">&copy; Copyright L.C. 2023</div>
         </div>
     </footer>
 
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/ajax-utils.js"></script>
-    <script src="js/script.js"></script>
+
+    <script src="../js/jquery-3.6.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/ajax-utils.js"></script>
+    <script src="../js/script.js"></script>
 
 </body>
 

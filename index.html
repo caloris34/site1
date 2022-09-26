@@ -10,9 +10,7 @@
   <meta property="og:title" content="Home">
   <meta property="og:type" content="website">
   <title>Where to?</title>
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- <link rel="stylesheet" href="bootstrap-5.2.1-dist/css/bootstrap.min.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" media="screen">
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
@@ -29,55 +27,46 @@
 
 
 <body>
+  <!-- <script type="module" src="header.js"></script> -->
+  <!-- <my-header></my-header> -->
+
+  <!-- <?php include('header.php'); ?> -->
 
   <header>
-    <nav id="header-nav" class="navbar navbar-default navbar-expand-xs">
-      <div class="container">
-        <div class="navbar-header">
+    <nav id="header-nav" class="navbar py-1 navbar-dark navbar-expand-xs">
+      <div id="container-header" class="container-fluid">
 
-          <div class="navbar-brand">
-            <h1><a href="index.html">Loris' Stories</h1></a>
-          </div>
+        <!-- <a href="index.html" id="navbar-title" class="navbar-brand">Loris' Stories</< /a> -->
+        <h1><a href="index.html" id="navbar-title" class="navbar-brand mx-auto">Loris' Stories</h1></a>
 
-          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-            data-target="#collapsable-nav" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
+        <button type="button" class="navbar-toggler custom-toggler" data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <div id="collapsable-nav" class="collapse navbar-collapse">
-          <ul id="nav-list" class="nav navbar-nav navbar-right">
-            <!-- #nav-list -->
-            <li id="navMenuButton">
-              <a href="snippets/blog-home.html">
-                <span class="fa-solid fa-earth-americas"></span><br class="hidden-xs"> Blog</a>
-            </li>
-            <li>
-              <a href="snippets/thought-home.html">
-                <span class="fa-solid fa-book"></span><br class="hidden-xs"> Thoughts</a>
-            </li>
-            <li>
-              <a href="snippets/photo-home.html">
-                <span class="fa-solid fa-panorama"></span><br class="hidden-xs"> Photos</a>
-            </li>
-            <li>
-              <a href="snippets/aboutme.html">
-                <span class="fa-regular fa-question"></span><br class="hidden-xs"> About me</a>
-            </li>
-          </ul><!-- #nav-list -->
-        </div><!-- .collapse .navbar-collapse -->
-      </div><!-- .container -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+          <div class="navbar-nav navbar-right">
+            <a href="snippets/blog-home.html" class="nav-item nav-link           fa-solid fa-earth-americas"> <br
+                class="hidden-xs">Blog</a>
+            <a href="snippets/thought-home.html" class="nav-item nav-link fa-solid fa-book"><br class="visible-xs">
+              Thoughts</a>
+
+            <a href="snippets/photo-home.html" class="nav-item nav-link fa-solid fa-panorama"><br class="hidden-xs">
+              Photos</a>
+
+            <a href="snippets/aboutme.html" class="nav-item nav-link fa-regular fa-question"><br class="hidden-xs">
+              About me</a>
+          </div> <!-- navbar-nav -->
+        </div> <!-- collapsable-nav -->
+
+      </div> <!-- contained-fluid -->
     </nav><!-- #header-nav -->
   </header>
 
 
-
   <!-- <div id="main-content" class="container">         FIXED WIDTH-->
   <!-- <div id="main-content" class="container-fluid">   WHOLE WIDTH-->
-  <div id="main-content" class="fluid">
+  <div id="main-content" class="container-fluid">
 
     <!-- <div class="imgbox">
       <img class="center-fit" src="images/DJI_waves.jpg">
@@ -87,19 +76,21 @@
 
     <br>
 
-    <!-- <script src="https://cdn.amcharts.com/lib/5/index.js"></script> -->
-    <!-- <script src="https://cdn.amcharts.com/lib/5/map.js"></script> -->
-
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
-    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
-    <script src="https://www.amcharts.com/lib/5/geodata/worldHigh.js"></script>
-
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldHigh.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
 
     <!-- This is the map!! -->
-    <!-- <div id="chartdiv"></div> -->
+    <div class="card card-bordered">
+      <div class="card-body">
+        <div id="chartdiv" style="height: 500px;"></div>
+      </div>
+    </div>
+
+
 
     <!-- <iframe src="https://uploads.knightlab.com/storymapjs/49d38c75a880f118b797c6d7911a186f/mymap/index.html"      frameborder="0" width="100%" height="800"></iframe> -->
 
@@ -116,12 +107,11 @@
     <!-- <img src="images/DJI_waves.jpg" alt="DJI waves" class="djiw visible-md visible-lg visible-sm"> -->
     <!-- </div> -->
 
-    <!-- <div class="col-md-6">
-      ciaoooooo
-    </div>
-    <div class="col-md-6">
-      secondooooooooooo
-    </div> -->
+    <!-- Spotify! -->
+    <iframe style="border-radius:12px"
+      src="https://open.spotify.com/embed/track/7oxspkUs3nZe1tf4VZGwq3?utm_source=generator" width="50%" height="80"
+      frameBorder="0" allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
 
   </div> <!-- main container -->
@@ -132,14 +122,14 @@
     <div class="container">
       <div id="socials" class="row">
 
-        <section id="instagram" class="col-xs-4 text-center">
+        <section id="instagram" class="col-sm-4 text-center">
           <span>
             <a href="https://www.instagram.com/ca.loriss/" target="_blank" class="fa-brands fa-instagram fa-2xl"></a>
           </span><br>
           Follow me!
         </section>
 
-        <section id="youtube" class="col-xs-4 text-center">
+        <section id="youtube" class="col-sm-4 text-center">
           <span>
             <a href="https://www.youtube.com/channel/UCdrvXOBU1C9uyMoRsBb5_5Q/" target="_blank"
               class="fa-brands fa-youtube fa-2xl"></a>
@@ -147,7 +137,7 @@
           Subscribe!<br>
         </section>
 
-        <section id="whatsapp" class="col-xs-4 text-center">
+        <section id="whatsapp" class="col-sm-4 text-center">
           <span>
             <a href="https://wa.me/33784155293" target="_blank" class="fa-brands fa-whatsapp fa-2xl"></a>
           </span><br>
@@ -156,18 +146,19 @@
         </section>
 
       </div>
-      <div class="mycopyright text-center">&copy; 2023 L.C.</div>
+      <div class="mycopyright text-center">&copy; Copyright L.C. 2023</div>
     </div>
   </footer>
 
-  <script src="js/jquery-2.1.4.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <!-- <script src="bootstrap-5.2.1-dist/js/bootstrap.min.js"></script> -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"  crossorigin="anonymous"></script> -->
+  <!-- <script src="js/jquery-2.1.4.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/jquery-3.6.1.min.js"></script>
   <script src="js/ajax-utils.js"></script>
   <script src="js/script.js"></script>
   <script src="js/map.js"></script>
 
+  <!-- <script src="https://sdk.scdn.co/spotify-player.js"></script> -->
+  <!-- <script src="js/spotify.js"></script> -->
 </body>
 
 </html>
