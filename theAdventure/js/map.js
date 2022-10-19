@@ -30,7 +30,7 @@ root.setThemes([
 var chart = root.container.children.push(
     am5map.MapChart.new(root, {
         panX: "rotateX",
-        homeZoomLevel: 1.5,
+        homeZoomLevel: 1.,
         projection: am5map.geoNaturalEarth1(),
         wheelY: "none",
         maxPanOut: 0.0
@@ -186,7 +186,7 @@ polygonSeries.data.setAll([
     }, {
         id: "CO", description: "https://www.google.com", polygonSettings: { fill: am5.color(color_visitedCountry) }
     }, {
-        id: "PE", description: "https://www.google.com", polygonSettings: { fill: am5.color(color_visitedCountry) }
+        id: "PE", description: "blog/PE_Peru.html", polygonSettings: { fill: am5.color(color_visitedCountry) }
     }, {
         id: "GR", description: "https://www.google.com", polygonSettings: { fill: am5.color(color_visitedCountry) }
     }, {
