@@ -31,37 +31,7 @@
   <!-- <script type="module" src="header.js"></script> -->
   <!-- <my-header></my-header> -->
 
-  <!-- <?php include('header.php'); ?> -->
-
-  <header>
-    <nav id="header-nav" class="navbar navbar-dark navbar-expand-xs">
-      <div id="container-header" class="container-fluid">
-
-        <a href="index.html" id="navbar-title" class="navbar-brand mx-auto py-0">Loris' Stories </a>
-        <!-- <h1><a href="index.html" id="navbar-title" class="navbar-brand mx-auto">Loris' Stories</h1></a> -->
-
-        <button type="button" class="navbar-toggler custom-toggler" data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div id="navbarCollapse" class="collapse navbar-collapse">
-          <div class="navbar-nav navbar-right">
-            <a href="blog-home.html" class="nav-item nav-link fa-solid fa-earth-americas"> Blog</a>
-            <a href="thought-home.html" class="nav-item nav-link fa-solid fa-book">
-              Thoughts</a>
-
-            <a href="photo-home.html" class="nav-item nav-link fa-solid fa-panorama">
-              Photos</a>
-
-            <a href="aboutme.html" class="nav-item nav-link fa-regular fa-question">
-              About me</a>
-          </div> <!-- navbar-nav -->
-        </div> <!-- collapsable-nav -->
-
-        <!-- </div> contained-fluid -->
-    </nav><!-- #header-nav -->
-  </header>
+  <?php include 'header.html';?>
 
 
   <!-- <div id="main-content" class="container">         FIXED WIDTH-->
@@ -94,7 +64,7 @@
     <!-- </div> -->
 
     <br>
-
+    
     <!-- Spotify! -->
     <iframe style="border-radius:12px"
       src="https://open.spotify.com/embed/track/7oxspkUs3nZe1tf4VZGwq3?utm_source=generator" width="50%" height="80"
@@ -137,10 +107,9 @@
 
         <section id="whatsapp" class="col-sm-4 text-center">
           <span>
-            <!-- <a href="33-78-41-55-293" target="_blank" class="fa-brands fa-whatsapp fa-2xl"></a> -->
-            <a href="contactme.html" target="_blank" class="fa-brands fa-whatsapp fa-2xl"></a>
+            <a href="https://wa.me/33784155293" target="_blank" class="fa-brands fa-whatsapp fa-2xl"></a>
           </span><br>
-          Contact me!<br>
+          Whatsapp me!<br>
           <!-- <a href="#" target="_blank" class="fa-brands fa-facebook fa-lg"></a> -->
         </section>
 

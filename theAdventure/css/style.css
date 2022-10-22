@@ -122,8 +122,6 @@ body {
 
 
 
-
-
 /* END MAIN CONTENT */
 
 
@@ -181,10 +179,6 @@ body {
 
 
 
-
-
-
-
 /****************************************** Large devices only ******************************************/
 @media (min-width: 1200px) {}
 
@@ -196,7 +190,6 @@ body {
 
 /****************************************** Extra small devices only ******************************************/
 @media (max-width: 767px) {
-
   /* Footer */
 
   .panel-footer section {
@@ -222,6 +215,8 @@ body {
 
 
 
+
+
 /* ABOUT ME HTML */
 
 .about-me {
@@ -234,12 +229,6 @@ body {
   text-justify: inter-word;
   ;
 }
-
-
-
-
-
-
 
 
 
