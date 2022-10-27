@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Random Planet Facts</title>
+    <meta name="description" content="Get a random fact about a planet in our solar system." />
+    <meta name="author" content="The IPFS Docs team." />
+    <style>
+        body {
+            margin: 15px auto;
+            max-width: 650px;
+            line-height: 1.2;
+            font-family: sans-serif;
+            font-size: 2em;
+            color: #fff;
+            background: #444;
+        }
+
+        a {
+            color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body onload="main()">
+    <h1>Random Planet Facts</h1>
+
+    <p id="output_p"></p>
+
+    <a id="output_p" href="">Cliccami</a>
+
+    <h2><a href="about.html">About this website</a></h2>
+
+    <a id="link_1">my first link</a>
+    <a id="link_2">random link</a>
+
+    <script>
+        function main() {
+            const facts = [
+                'PE_Cusco.html',
+                'PE_Peru.html'
+            ]
+            document.querySelector('#output_p').innerHTML =
+                '<a href="' + facts[Math.floor(Math.random() * facts.length)] + '"> Lucky! </a>'
+
+            var link1 = "https://stackoveflow.com/";
+            var link2 = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById("link_1").href = link1;
+            document.getElementById("link_2").href = link2;
+
+        }
+    </script>
+</body>
+
+</html>
