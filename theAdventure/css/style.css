@@ -152,11 +152,13 @@ body {
 #socials a:link,
 #socials a:focus {
   text-decoration: none;
-  color: inherit
+  /* color: inherit */
 }
 
 .fa-brands {
   padding-bottom: 15px;
+  text-decoration: none;
+  /* color: inherit; */
 }
 
 .fa-instagram {

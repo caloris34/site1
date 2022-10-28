@@ -11,18 +11,6 @@
 }
 
 
-
-#blog-intro {
-    padding-left: 70px;
-    padding-right: 70px;
-    padding-top: 10px;
-}
-
-#blog-intro h2 {
-    text-align: center;
-    font-style: italic;
-}
-
 .blog-container {
     display: flex;
     justify-content: center;
@@ -106,13 +94,14 @@
     max-width: 1100px;
     margin: auto;
     border: solid 1px black;
+    justify-content: space-between;
 }
 
-#blog-head {
-    /* background: #FBFAF9; */
+.blog-block {
+    background: whitesmoke;
     display: inline-block;
-    /* width: 100%; */
-    /* position: relative; */
+    width: 100%;
+    position: relative;
     margin-bottom: 60px;
     border: solid red 2px;
 }
@@ -120,7 +109,6 @@
 #blog-head .ls-wrapper {
     /* display: flex; */
     /* flex-wrap: wrap; */
-    justify-content: space-between;
     /* padding: 20px 0 50px 0; */
 }
 
@@ -128,19 +116,12 @@
     text-align: center;
 }
 
-#blog-destinations {
-    width: 1100px;
-    display: inline-block;
-    position: relative;
-    margin-bottom: 60px;
-    border: solid red 2px;
-}
-
 #blog-container {
+    width: 1100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 20px;
+    margin: auto;
     flex-wrap: wrap;
 }
 
@@ -152,6 +133,11 @@
 
 /****************************************** Large devices only ******************************************/
 @media (min-width: 1200px) {
+
+    .ls-wrapper {
+        max-width: 1100px;
+    }
+
     .blog-box {
         width: 300px;
     }
@@ -159,6 +145,11 @@
 
 /****************************************** Medium devices only ******************************************/
 @media (min-width: 992px) and (max-width: 1199px) {
+
+    .ls-wrapper {
+        max-width: 900px;
+    }
+
     .blog-box {
         width: 45%;
     }
@@ -167,26 +158,35 @@
 /****************************************** Small devices only ******************************************/
 @media (min-width: 768px) and (max-width: 991px) {
 
+    .ls-wrapper {
+        max-width: 90%;
+    }
+    #blog-container {
+        justify-content: center;
+    }
     .blog-box {
         margin: 20px 10px;
         width: 45%;
     }
 
-    #blog {
-        padding: 20px;
-    }
+
 }
 
 /****************************************** Extra small devices only ******************************************/
 @media (max-width: 767px) {
+
+    .ls-wrapper {
+        max-width: 90%;
+    }
+
+    #blog-container {
+        justify-content: center;
+    }
 
     .blog-box {
         margin: 20px 10px;
         width: 90%;
     }
 
-    #blog {
-        padding: 20px;
-    }
 
 }
