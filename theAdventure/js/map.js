@@ -172,7 +172,7 @@ polygonSeries.data.setAll([
     {
         id: "FR", description: "https://www.google.com", polygonSettings: { fill: am5.color(color_visitedCountry) }
     }, {
-        id: "BR", description: "https://www.google.com", polygonSettings: { fill: am5.color(color_visitedCountry) }
+        id: "BR", description: "../blog/BR_Brazil.php", polygonSettings: { fill: am5.color(color_visitedCountry) }
     }, {
         id: "IT", description: "https://www.google.com", polygonSettings: { fill: am5.color(color_visitedCountry) }
     }, {

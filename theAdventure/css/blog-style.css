@@ -161,9 +161,11 @@
     .ls-wrapper {
         max-width: 90%;
     }
+
     #blog-container {
         justify-content: center;
     }
+
     .blog-box {
         margin: 20px 10px;
         width: 45%;

@@ -1,78 +1,264 @@
+<!--  -->
+
 <!DOCTYPE html>
 <html style="font-size: 16px;" lang="en">
 
-
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8">
-  <meta name="keywords"
-    content="Mountain, Latest Travel News, Photo Gallery, Photo Tours, Master Photo Tour, INTUITIVE">
-  <meta name="description" content="">
-  <meta property="og:title" content="Home">
-  <meta property="og:type" content="website">
-  <title>Where to now?</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" media="screen">
-  <link id="u-theme-google-font" rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-  <link id="u-page-google-font" rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i|PT+Sans:400,400i,700,700i|Black+Han+Sans:400">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords"
+        content="Mountain, Latest Travel News, Photo Gallery, Photo Tours, Master Photo Tour, INTUITIVE">
+    <meta name="description" content="">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
 
-  <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <!-- title -->
+    <title>Loris' Stories</title>
 
-  <!-- Add icon library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    type="text/css">
+    <!-- style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" media="screen">
+    <link rel="stylesheet" href="css/blog-style.css" media="screen">
+    <link rel="stylesheet" href="css/nav-style.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        type="text/css">
+
+    <!-- site icon -->
+    <link rel="shortcut icon" href="images/DJI_waves.jpg" />
 </head>
 
 
-<body>
-  <!-- <script type="module" src="header.js"></script> -->
-  <!-- <my-header></my-header> -->
+<body onload="main()">
 
-  <!-- <?php include('header.php'); ?> -->
+    <!-- <?php include 'header.html';?> -->
 
-  <header>
-    <nav id="header-nav" class="navbar navbar-dark navbar-expand-xs">
-      <div id="container-header" class="container-fluid">
+    <header>
 
-        <a href="index.html" id="navbar-title" class="navbar-brand mx-auto py-0">Loris' Stories </a>
-        <!-- <h1><a href="index.html" id="navbar-title" class="navbar-brand mx-auto">Loris' Stories</h1></a> -->
+        <nav id="top-nav">
+            <div class="wrapper">
+                <input type="radio" name="slider" id="menu-btn">
+                <input type="radio" name="slider" id="close-btn">
+                <ul class="nav-links">
+                    <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                    <li>
+                        <a href="" class="desktop-item">Blog</a>
 
-        <button type="button" class="navbar-toggler custom-toggler" data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+                    </li>
+                    <li>
+                        <a href="" class="desktop-item">About me</a>
+                    </li>
+                    <li>
+                        <a href="" class="desktop-item">Upcoming travel</a>
+                    </li>
+                </ul>
+                <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+            </div>
+        </nav>
 
-        <div id="navbarCollapse" class="collapse navbar-collapse">
-          <div class="navbar-nav navbar-right">
-            <a href="blog-home.html" class="nav-item nav-link fa-solid fa-earth-americas"> Blog</a>
-            <a href="thought-home.html" class="nav-item nav-link fa-solid fa-book">
-              Thoughts</a>
+        <a href="index.html" id="logo-title" class="">Loris' Stories </a>
+    </header>
 
-            <a href="photo-home.html" class="nav-item nav-link fa-solid fa-panorama">
-              Photos</a>
+    <nav id="content-nav">
+        <div class="wrapper">
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li>
+                    <a href="" class="desktop-item">Europe</a>
+                    <input type="checkbox" id="showDropEU">
+                    <label for="showDropEU" class="mobile-item">Europe</label>
+                    <ul class="drop-menu">
+                        <li><a href="#">Italy</a></li>
+                        <li><a href="#">Spain</a></li>
+                        <li><a href="#">Norway</a></li>
+                        <li><a href="#">Sweden</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="desktop-item">Asia</a>
+                    <input type="checkbox" id="showDropAsia">
+                    <label for="showDropAsia" class="mobile-item">Asia</label>
+                    <ul class="drop-menu">
+                        <li><a href="#">Malaysia</a></li>
+                        <li><a href="#">Thailand</a></li>
+                        <li><a href="#">Singapore</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="desktop-item">South America</a>
+                    <input type="checkbox" id="showDropSA">
+                    <label for="showDropSA" class="mobile-item">South America</label>
+                    <ul class="drop-menu">
+                        <li><a href="blog/PE_Peru.html">Perù</a></li>
+                        <li><a href="blog/0_workinprogress.html">Brazil</a></li>
+                        <li><a href="#">Colombia</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="desktop-item">North America</a>
+                    <input type="checkbox" id="showDropNA">
+                    <label for="showDropNA" class="mobile-item">North America</label>
+                    <ul class="drop-menu">
+                        <li><a href="#">California</a></li>
+                        <li><a href="#">Arizona</a></li>
+                        <li><a href="#">Nevada</a></li>
+                        <li><a href="#">Mexico</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="desktop-item">Eurasia</a>
+                    <input type="checkbox" id="showDropEA">
+                    <label for="showDropEA" class="mobile-item">Eurasia</label>
+                    <ul class="drop-menu">
+                        <li><a href="#">Georgia</a></li>
+                        <li><a href="#">Armenia</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="rnd_link">Random!</a>
+                </li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+    </nav>
 
-            <a href="about-me.html" class="nav-item nav-link fa-regular fa-question">
-              About me</a>
-          </div> <!-- navbar-nav -->
-        </div> <!-- collapsable-nav -->
+    <div id="blog-intro" class="blog-block">
+        <img src="images/DJI_vignemale_sunrise_heal.jpg" alt="" width="100%" height="800px">
+    </div>
 
-        <!-- </div> contained-fluid -->
-    </nav><!-- #header-nav -->
-  </header>
+    <div id="blog-head" class="blog-block">
+        <div class="ls-wrapper">
+            <h2>Travel blog homepage</h2>
 
+            Hey you curious explorer!
+            <br>
+            <br>
+            Thanks for visiting my blog.
+            I hope you’ll enjoy the stories I tell in these pages. They are a little part of my life that i am
+            glad to share
+            with you, may it help you decide where to go for your next trip or make the life change you need.
+            <br>
+            <br>
+            It won’t be a Lonely Planet guide, but rather a personal story-telling with my favorite moments and
+            places.
+            Here below I pinned three special stories, or find your way to the article or country you would like!
+            Good reading!
+        </div>
+    </div> <!-- end blog-head -->
 
-  <!-- <div id="main-content" class="container">         FIXED WIDTH-->
-  <!-- <div id="main-content" class="container-fluid">   WHOLE WIDTH-->
-  <div id="main-content" class="container-fluid">
+    <div id="blog-break" class="blog-block">
+    </div>
 
-    <!-- <div class="imgbox">
-      <img class="center-fit" src="images/DJI_waves.jpg">
-    </div> -->
+    <div id="blog-destinations" class="blog-block">
+        <div id="blog-container" class="ls-wrapper">
 
-    <br>
+            <!--box-1------------->
+            <div class="blog-box">
+                <!--img---->
+                <div class="blog-img">
+                    <a href="#"><img alt="blog" src="images/blog/IMG_1045.JPG"></a>
+                </div>
+                <!--text--->
+                <div class="blog-text">
+                    <span>21 October 2022</span>
+                    <a href="#" class="blog-title">Toulouse
+                        <br>&nbsp;</a>
+                </div>
+            </div>
+
+            <!--box-2------------->
+            <div class="blog-box">
+                <!--img---->
+                <div class="blog-img">
+                    <a href="blog/PE_Peru.html"><img alt="blog" src="images/blog/cover_peru.JPG"></a>
+                </div>
+                <!--text--->
+                <div class="blog-text">
+                    <span>April-May 2022</span>
+                    <a href="blog/PE_Peru.html" class="blog-title">Perù
+                        <br>&nbsp;</a>
+                </div>
+            </div>
+
+            <!--box-3------------->
+            <div class="blog-box">
+                <!--img---->
+                <div class="blog-img">
+                    <img alt="blog" src="images/blog/IMG_1045.JPG">
+                </div>
+                <!--text--->
+                <div class="blog-text">
+                    <span>18 July 2021</span>
+                    <a href="#" class="blog-title">What Has Happened to All of the Web Design Ideas?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- This is the map!! -->
+    <div class="blog-block">
+        <div class="map-container">
+            <div id="chartdiv"></div>
+        </div>
+    </div>
+
+    <!-- Spotify! -->
+    <div class="blog-block">
+        <iframe style="border-radius:12px"
+            src="https://open.spotify.com/embed/track/7oxspkUs3nZe1tf4VZGwq3?utm_source=generator" width="50%"
+            height="80" frameBorder="0" allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    </div>
+
+    <footer class="panel-footer">
+        <div class="container">
+            <div id="socials" class="row">
+
+                <section id="instagram" class="col-sm-4 text-center">
+                    <span>
+                        <a href="https://www.instagram.com/ca.loriss/" target="_blank"
+                            class="fa-brands fa-instagram fa-2xl"></a>
+                    </span><br>
+                    Follow me!
+                </section>
+
+                <section id="youtube" class="col-sm-4 text-center">
+                    <span>
+                        <a href="https://www.youtube.com/channel/UCdrvXOBU1C9uyMoRsBb5_5Q/" target="_blank"
+                            class="fa-brands fa-youtube fa-2xl"></a>
+                    </span><br>
+                    Subscribe!<br>
+                </section>
+
+                <!-- <section id="couchsurfing" class="col-sm-3 text-center">
+              <span>
+                <a href="https://www.couchsurfing.com/people/loris-casadei"
+                target="_blank" class="fa-couchsurfing">
+                <img src = "images/couchsurfing.svg" width="30" alt="My Happy SVG">
+                </a>
+              </span><br>
+              Meet me!<br>
+            </section> -->
+
+                <section id="whatsapp" class="col-sm-4 text-center">
+                    <span>
+                        <!-- <a href="33-78-41-55-293" target="_blank" class="fa-brands fa-whatsapp fa-2xl"></a> -->
+                        <a href="contact-me.html" class="fa-brands fa-whatsapp fa-2xl"></a>
+                    </span><br>
+                    Contact me!<br>
+                </section>
+
+            </div>
+            <div class="mycopyright text-center">&copy; Copyright L.C. 2023</div>
+        </div>
+    </footer>
+
 
     <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
@@ -80,104 +266,26 @@
     <script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/geodata/worldHigh.js"></script>
     <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-
-    <!-- This is the map!! -->
-    <div class="map-container">
-      <div id="chartdiv"></div>
-    </div>
-
-    <!-- <div class="jumbotron"> -->
-    <!-- <img src="images/DJI_waves.jpg" alt="DJI waves" class="img-responsive visible-xs"> -->
-    <!-- <img src="images/DJI_waves.jpg" alt="DJI waves" class="djiw visible-md visible-lg visible-sm"> -->
-    <!-- </div> -->
-
-    <br>
-
-    <!-- Spotify! -->
-    <iframe style="border-radius:12px"
-      src="https://open.spotify.com/embed/track/7oxspkUs3nZe1tf4VZGwq3?utm_source=generator" width="50%" height="80"
-      frameBorder="0" allowfullscreen=""
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-
-
-  </div> <!-- main container -->
+    <script src="js/map.js"></script>
 
 
 
-  <footer class="panel-footer">
-    <div class="container">
-      <div id="socials" class="row">
+    <script>
+        function main() {
+            const facts = [
+                'blog/PE_Cusco.html',
+                'blog/PE_Peru.html'
+            ]
+            var rnd_link = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById("rnd_link").href = rnd_link;
+        }
+    </script>
 
-        <section id="instagram" class="col-sm-4 text-center">
-          <span>
-            <a href="https://www.instagram.com/ca.loriss/" target="_blank" class="fa-brands fa-instagram fa-2xl"></a>
-          </span><br>
-          Follow me!
-        </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/ajax-utils.js"></script>
+    <script src="js/script.js"></script>
 
-        <section id="youtube" class="col-sm-4 text-center">
-          <span>
-            <a href="https://www.youtube.com/channel/UCdrvXOBU1C9uyMoRsBb5_5Q/" target="_blank"
-              class="fa-brands fa-youtube fa-2xl"></a>
-          </span><br>
-          Subscribe!<br>
-        </section>
-
-        <!-- <section id="couchsurfing" class="col-sm-3 text-center">
-          <span>
-            <a href="https://www.couchsurfing.com/people/loris-casadei"
-            target="_blank" class="fa-couchsurfing">
-            <img src = "images/couchsurfing.svg" width="30" alt="My Happy SVG">
-            </a>
-          </span><br>
-          Meet me!<br>
-        </section> -->
-
-        <section id="whatsapp" class="col-sm-4 text-center">
-          <span>
-            <!-- <a href="33-78-41-55-293" target="_blank" class="fa-brands fa-whatsapp fa-2xl"></a> -->
-            <a href="contact-me.html" target="_blank" class="fa-brands fa-whatsapp fa-2xl"></a>
-          </span><br>
-          Contact me!<br>
-          <!-- <a href="#" target="_blank" class="fa-brands fa-facebook fa-lg"></a> -->
-        </section>
-
-      </div>
-      <div class="mycopyright text-center">&copy; Copyright 2022-2023, all rights reserved.</div>
-    </div>
-  </footer>
-
-  <!-- <script src="js/jquery-2.1.4.min.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/jquery-3.6.1.min.js"></script>
-  <script src="js/ajax-utils.js"></script>
-  <script src="js/script.js"></script>
-  <script src="js/map.js"></script>
-
-  <!-- <script src="https://sdk.scdn.co/spotify-player.js"></script> -->
-  <!-- <script src="js/spotify.js"></script> -->
 </body>
 
 </html>
-
-
-
-<!-- <hr class="visible-xs"> -->
-
-
-
-<!-- contains both columns -->
-<!-- <div class="row two-columns">
-  <div class="column left">
-    Prima colonna
-  </div> -->
-<!-- end column left -->
-<!-- <div class="column right">
-    Seconda colonna -->
-<!-- </div> end column right -->
-<!-- </div> end row two-columns -->
-
-
-<!-- <a href="index.html" class="pull-left" id="logo-img">
-            <img src="images/Logo/logo.png">
-          </a> -->

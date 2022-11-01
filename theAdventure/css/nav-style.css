@@ -1,9 +1,15 @@
+#top-nav {
+    /* position: fixed; */
+    z-index: 100;
+    width: 100%;
+    background: #242526;
+}
+
 #content-nav {
     /* position: fixed; */
     z-index: 100;
     width: 100%;
     background: #242526;
-    /* margin-bottom: 40px; */
 }
 
 #content-nav .wrapper {
