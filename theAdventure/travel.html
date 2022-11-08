@@ -1,0 +1,297 @@
+<!--  -->
+
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords"
+        content="Mountain, Latest Travel News, Photo Gallery, Photo Tours, Master Photo Tour, INTUITIVE">
+    <meta name="description" content="">
+    <meta property="og:title" content="Home">
+    <meta property="og:type" content="website">
+
+    <!-- title -->
+    <title>Loris' Stories</title>
+
+    <!-- style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" media="screen">
+    <link rel="stylesheet" href="css/blog-style.css" media="screen">
+    <link rel="stylesheet" href="css/nav-style.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        type="text/css">
+
+    <!-- site icon -->
+    <link rel="shortcut icon" href="images/DJI_waves.jpg" />
+</head>
+
+
+<body onload="main()">
+
+    <!-- <?php include 'header.html';?> -->
+
+    <header>
+        <div class="wrap-mainnav">
+            <nav id="main-nav">
+                <ul>
+                    <li class="li-selected">
+                        <a href="index.html" class="d-none d-sm-block">Home</a>
+                        <a href="index.html" class="d-block d-sm-none fa fa-house"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-none d-sm-block">Travel</a>
+                        <a href="#" class="d-block d-sm-none fa fa-plane"></a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-none d-sm-block">Photo-philosophy</a>
+                        <a href="#" class="d-block d-sm-none fa fa-camera"></a>
+                    </li>
+                    <li>
+                        <a href="about-me.html" class="d-none d-sm-block">About me</a>
+                        <a href="about-me.html" class="d-block d-sm-none fa fa-question"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div>
+            <a href="index.html" id="logo-title" class="">Loris' Stories </a>
+        </div>
+    </header>
+
+    <nav id="content-nav">
+        <div class="wrapper">
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li>
+                    <a href="" class="desktop-item">Europe</a>
+                    <input type="checkbox" id="showDropEU">
+                    <label for="showDropEU" class="mobile-item">Europe</label>
+                    <ul class="drop-menu">
+                        <li><a href="#">Italy</a></li>
+                        <li><a href="#">Spain</a></li>
+                        <li><a href="#">Norway</a></li>
+                        <li><a href="#">Sweden</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="desktop-item">Asia</a>
+                    <input type="checkbox" id="showDropAsia">
+                    <label for="showDropAsia" class="mobile-item">Asia</label>
+                    <ul class="drop-menu">
+                        <li><a href="#">Malaysia</a></li>
+                        <li><a href="#">Thailand</a></li>
+                        <li><a href="#">Singapore</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="desktop-item">South America</a>
+                    <input type="checkbox" id="showDropSA">
+                    <label for="showDropSA" class="mobile-item">South America</label>
+                    <ul class="drop-menu">
+                        <li><a href="blog/PE_Peru.html">Perù</a></li>
+                        <li><a href="blog/0_workinprogress.html">Brazil</a></li>
+                        <li><a href="#">Colombia</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="desktop-item">North America</a>
+                    <input type="checkbox" id="showDropNA">
+                    <label for="showDropNA" class="mobile-item">North America</label>
+                    <ul class="drop-menu">
+                        <li><a href="#">California</a></li>
+                        <li><a href="#">Arizona</a></li>
+                        <li><a href="#">Nevada</a></li>
+                        <li><a href="#">Mexico</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="desktop-item">Eurasia</a>
+                    <input type="checkbox" id="showDropEA">
+                    <label for="showDropEA" class="mobile-item">Eurasia</label>
+                    <ul class="drop-menu">
+                        <li><a href="#">Georgia</a></li>
+                        <li><a href="#">Armenia</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a id="rnd_link">Random!</a>
+                </li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+    </nav>
+
+    <div id="blog-intro" class="blog-block">
+        <img src="images/DJI_vignemale_sunrise_heal.jpg" alt="" width="100%" height="800px">
+    </div>
+
+    <div id="blog-head" class="blog-block">
+        <div class="ls-wrapper">
+            <h2>Travel blog homepage</h2>
+
+            Hey you curious explorer!
+            <br>
+            <br>
+            Thanks for visiting my blog.
+
+            My objective is to make people aware of what's in the world aside of the 7 wonders, blue beaches and
+            Coliseum.
+            I will share my adventures here, but I also provide full assistance in case you wish to organize such trips,
+            from the cheap flight research to the authentic plans organization.
+
+            <br>
+
+            I hope you’ll enjoy the stories I tell in these pages. They are a little part of my life that i am
+            glad to share
+            with you, may it help you decide where to go for your next trip or make the life change you need.
+            <br>
+            <br>
+            It won’t be a Lonely Planet guide, but rather a personal story-telling with my favorite moments and
+            places.
+            Here below I pinned three special stories, or find your way to the article or country you would like!
+            Good reading!
+        </div>
+    </div> <!-- end blog-head -->
+
+    <div id="blog-break" class="blog-block">
+    </div>
+
+    <div id="blog-destinations" class="blog-block">
+        <div id="blog-container" class="ls-wrapper">
+
+            <!--box-1------------->
+            <div class="blog-box">
+                <!--img---->
+                <div class="blog-img">
+                    <a href="#"><img alt="blog" src="blog/images/IMG_1045.JPG"></a>
+                </div>
+                <!--text--->
+                <div class="blog-text">
+                    <span>21 October 2022</span>
+                    <a href="#" class="blog-title">Toulouse
+                        <br>&nbsp;</a>
+                </div>
+            </div>
+
+            <!--box-2------------->
+            <div class="blog-box">
+                <!--img---->
+                <div class="blog-img">
+                    <a href="blog/PE_Peru.html"><img alt="blog" src="blog/images/cover_peru.JPG"></a>
+                </div>
+                <!--text--->
+                <div class="blog-text">
+                    <span>April-May 2022</span>
+                    <a href="blog/PE_Peru.html" class="blog-title">Perù
+                        <br>&nbsp;</a>
+                </div>
+            </div>
+
+            <!--box-3------------->
+            <div class="blog-box">
+                <!--img---->
+                <div class="blog-img">
+                    <img alt="blog" src="blog/images/IMG_1045.JPG">
+                </div>
+                <!--text--->
+                <div class="blog-text">
+                    <span>18 July 2021</span>
+                    <a href="#" class="blog-title">What Has Happened to All of the Web Design Ideas?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- This is the map!! -->
+    <div class="blog-block">
+        <div class="map-container">
+            <div id="chartdiv">When you don't have a home to hang frames, you need to adapt your scratch map!</div>
+        </div>
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="panel-footer">
+        <div class="container">
+            <div id="socials" class="row">
+
+                <section id="instagram" class="col-sm-4 text-center">
+                    <span>
+                        <a href="https://www.instagram.com/ca.loriss/" target="_blank"
+                            class="fa-brands fa-instagram fa-2xl"></a>
+                    </span><br>
+                    Follow me!
+                </section>
+
+                <section id="youtube" class="col-sm-4 text-center">
+                    <span>
+                        <a href="https://www.youtube.com/channel/UCdrvXOBU1C9uyMoRsBb5_5Q/" target="_blank"
+                            class="fa-brands fa-youtube fa-2xl"></a>
+                    </span><br>
+                    Subscribe!<br>
+                </section>
+
+                <!-- <section id="couchsurfing" class="col-sm-3 text-center">
+              <span>
+                <a href="https://www.couchsurfing.com/people/loris-casadei"
+                target="_blank" class="fa-couchsurfing">
+                <img src = "images/couchsurfing.svg" width="30" alt="My Happy SVG">
+                </a>
+              </span><br>
+              Meet me!<br>
+            </section> -->
+
+                <section id="whatsapp" class="col-sm-4 text-center">
+                    <span>
+                        <!-- <a href="33-78-41-55-293" target="_blank" class="fa-brands fa-whatsapp fa-2xl"></a> -->
+                        <a href="contact-me.html" class="fa-brands fa-whatsapp fa-2xl"></a>
+                    </span><br>
+                    Contact me!<br>
+                </section>
+
+            </div>
+            <div class="mycopyright text-center">&copy; Copyright L.C. 2023</div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/geodata/worldHigh.js"></script>
+    <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+    <script src="js/map.js"></script>
+
+
+
+    <script>
+        function main() {
+            const facts = [
+                'blog/PE_Cusco.html',
+                'blog/PE_Peru.html'
+            ]
+            var rnd_link = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById("rnd_link").href = rnd_link;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/ajax-utils.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

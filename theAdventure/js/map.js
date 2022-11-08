@@ -11,6 +11,9 @@
  */
 
 
+// TO DO:
+//  - zoom with double click
+//  - colors
 
 
 // Create root and chart
