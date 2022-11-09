@@ -175,6 +175,27 @@ body {
   object-fit: cover;
 }
 
+
+/* BLOG QUOTE */
+
+#blog-quote {
+  background-image: url('../images/SQCR2800.JPG');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 500px;
+}
+
+
+/* BLOG PHOTO */
+
+#blog-photo {
+  background-image: url('../images/salkantay.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  height: 500px;
+}
+
 /* END MAIN CONTENT */
 
 /* ======================================================== */
@@ -195,24 +216,46 @@ body {
 
 /* ======================================================== */
 
+
+/* PHOTO.HTML */
+
+#photo-1 {
+  background-image: url('../images/salkantay.jpg');
+}
+
+#photo-2 {
+  background-image: url('../images/SQCR2800.JPG');
+}
+
+.photo-block {
+  background-attachment: fixed;
+  background-size: cover;
+  height: 500px;
+}
+
+/* END PHOTO.HTML */
+
+/* ======================================================== */
+
+
+
 /* FOOTER */
 
 .wrap-footer {
-  /* margin-top: 30px; */
   padding-top: 35px;
   background-color: black;
   color: white;
-  width: 100%;
+  margin: auto;
   font-style: italic;
 }
 
 #wrap-socials {
-  width: 70%;
   padding: 0 20px;
   margin: auto;
-  margin-bottom: 25px;
+  background-color: black;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
-
 
 .social,
 .social:hover,
@@ -223,27 +266,36 @@ body {
   text-decoration: none;
 }
 
-
 .fa-brands {
   padding-bottom: 15px;
   text-decoration: none;
-  /* color: inherit; */
+  color: inherit;
 }
 
 .fa-instagram {
-  color: #C13584;
+  /* color: #C13584; */
 }
 
 .fa-youtube {
-  color: #FF0000;
+  /* color: #FF0000; */
 }
 
 .fa-whatsapp {
-  color: #075e54;
+  /* color: #075e54; */
+}
+
+footer hr {
+  width: 30%;
+  margin: auto;
+  /* height: 20px; */
+  border-width: 2px;
+  color: white;
+  opacity: 1;
 }
 
 .mycopyright {
   font-size: 0.6em;
+  margin-top: 10px;
   padding-bottom: 15px;
 }
 
