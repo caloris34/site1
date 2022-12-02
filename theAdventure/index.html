@@ -27,8 +27,12 @@
     <link rel="stylesheet" href="css/style.css" media="screen">
     <link rel="stylesheet" href="css/blog-style.css" media="screen">
     <link rel="stylesheet" href="css/nav-style.css" media="screen">
+    <link rel="stylesheet" href="css/slider.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js"></script>
 
     <!-- Add icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -56,7 +60,7 @@
                         <a href="travel.html" class="d-block d-sm-none fa fa-plane"></a>
                     </li>
                     <li>
-                        <a href="photo.html" class="d-none d-sm-block">Photo-philosophy</a>
+                        <a href="photo.html" class="d-none d-sm-block">Gallery</a>
                         <a href="photo.html" class="d-block d-sm-none fa fa-camera"></a>
                     </li>
                     <li>
@@ -80,32 +84,31 @@
     </div>
 
     <div id="blog-head" class="blog-block">
-        <h2>Don't just travel, <span class="nice-text">Live </span> the world</h2>
+        <!-- <h2>Don't just travel, <span class="nice-text">Live </span> the world</h2> -->
         <div class="ls-wrapper">
 
             <div class="half-page" id="blog-head-text">
-                You all know about the 7 wonders, the thousands of blue beaches to make envious your colleagues at
-                the
-                office, or the "10 best things to do ..."
+                You all know about the 7 wonders, the thousands of blue beaches and the "10 best things to do ..."
                 <br> <br>
-                Many still find this type of travelling perfectly satisfying their expectations. But few souls
+ 
+                Many enjoy this type of travelling and there is nothing wrong about it. But few souls
                 out
                 there, do not. I feel you.
-                I am also a hidden gems hunter, always looking for living the most authentic and original experiences
+                I always look for living the most authentic and original experiences 
                 the
                 world can offer to us.
-                But finding these experiences can be very time consuming or even impossible for many.
+                But finding these experiences can be very time consuming or even impossible.
                 <br><br>
-                That is why I decided to share my adventures here, tell the details of unique experiences but also
-                provide
-                full assistance in case you wish to
-                organize such trips,
-                from the cheap flight research to the authentic plans organization. Have a look at it <a
-                    href="travel.html">here</a>!
+                
+                That is what you will find here: some detailed atypical travel experiences. But also full support to make a tailor-suited
+                plan for your next trip,
+                from the cheap flight research to the authentic ideas.
+                <br><br>
+                So, <a
+                    href="travel.html">where</a> do you wanna go?
             </div>
 
             <div class="half-page" id="blog-head-img">
-
                 <img src="images/Ollanta.jpg" alt="">
             </div>
 
@@ -113,9 +116,108 @@
     </div>
     <!-- end blog-head -->
 
+
+
+
+
+
+    <div id="blog-slider" class="blog-block">
+        <div class="container">
+            <div class="subcontainer">
+                <div class="slider-wrapper">
+
+                    <div class="controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+                        <button class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
+                                    <i class="fas fa-angle-left fa-5x"></i>
+                        </button>
+                        <button class="next" data-controls="next" aria-controls="customize" tabindex="-1">
+                                <i class="fas fa-angle-right fa-5x"></i>          
+                        </button>
+                    </div>
+                    
+                    <div class="my-slider">
+                        <div>
+                            <div class="slide">
+                                <a class="slide-img img-1" href="#"></a>
+                                <br>
+                                <div class="slide-title">
+                                    <a href="#">
+                                    <h3>The Andean trail</h3>
+                                    <p>Huaraz, Peru</p></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                    <a class="slide-img img-2" href="#"></a>
+                                <br>
+                                <div class="slide-title">
+                                    <a href="#">
+                                    <h3>Lakes</h3>
+                                    <p>?, Sweden</p></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <a class="slide-img img-3" href="#"></a>
+                                <br>
+                                <div class="slide-title">
+                                    <a href="#">
+                                    <h3>Fjords van</h3>
+                                    <p>Norway</p></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <a class="slide-img img-4" href="#"></a>
+                                <br>
+                                <div class="slide-title">
+                                    <a href="#">
+                                    <h3>Andalusan secrets</h3>
+                                    <p>Andalucia, Spain</p></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <a class="slide-img img-5" href="#"></a>
+                                <br>
+                                <div class="slide-title">
+                                    <a href="#">
+                                    <h3>The Mayan Hunt</h3>
+                                    <p>Yucatan, Mexico</p></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="slide">
+                                <a class="slide-img img-5" href="#"></a>
+                                <br>
+                                <div class="slide-title">
+                                    <a href="#">
+                                    <h3>The Dolomites wander</h3>
+                                    <p>Dolomites, Italy</p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="blog-boh" class="blog-block">
+        <h2>ciao ciao</h2>
+    </div>
+
+    <div id="blog-photo" class="blog-block">        
+    </div>
     <div id="blog-quote" class="blog-block">
+
         <div class="ls-wrapper">
-            <h2>There is nothing natural or obvious about taking a holiday abroad.</h2>
+            <h3>There is nothing natural or obvious about taking a holiday abroad.</h3>
 
             <p class="corsivo">
 
@@ -142,64 +244,6 @@
 
         </div>
     </div>
-
-    <div id="blog-destinations" class="blog-block">
-        <h2>Where to ?</h2>
-
-        <div id="blog-container" class="ls-wrapper">
-
-
-            <!--box-1------------->
-            <div class="blog-box">
-                <!--img---->
-                <div class="blog-img">
-                    <a href="#"><img alt="blog" src="blog/images/IMG_1045.JPG"></a>
-                </div>
-                <!--text--->
-                <div class="blog-text">
-                    <span>21 October 2022</span>
-                    <a href="#" class="blog-title">Toulouse
-                        <br>&nbsp;</a>
-                </div>
-            </div>
-
-            <!--box-2------------->
-            <div class="blog-box">
-                <!--img---->
-                <div class="blog-img">
-                    <a href="blog/PE_Peru.html"><img alt="blog" src="blog/images/cover_peru.JPG"></a>
-                </div>
-                <!--text--->
-                <div class="blog-text">
-                    <span>April-May 2022</span>
-                    <a href="blog/PE_Peru.html" class="blog-title">Perù
-                        <br>&nbsp;</a>
-                </div>
-            </div>
-
-            <!--box-3------------->
-            <div class="blog-box">
-                <!--img---->
-                <div class="blog-img">
-                    <img alt="blog" src="images/DJI_vignemale_sunrise.jpg">
-                </div>
-                <!--text--->
-                <div class="blog-text">
-                    <span>18 July 2021</span>
-                    <a href="#" class="blog-title">Mountains!<br>&nbsp;</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div id="blog-photo" class="blog-block">
-        <h2>Photo-philosophy</h2>
-        <!-- <img src="images/salkantay.jpg" alt=""> -->
-    </div>
-
-
 
 
     <!-- FOOTER -->
@@ -238,14 +282,24 @@
         <div class="mycopyright text-center">
             &copy; Copyright Loris' Stories 2023
         </div>
+
     </footer>
 
+
+    <!-- <div class="newfooter">
+        <ul>
+            <li><a href="#"><i class="fa-brands fa-instagram instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-whatsapp whatsapp"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-youtube youtube"></i></a></li>
+        </ul>
+    </div> -->
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.6.1.min.js"></script>
     <script src="js/ajax-utils.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/myslider.js"></script>
 
 </body>
 

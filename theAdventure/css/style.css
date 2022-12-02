@@ -12,7 +12,7 @@ body {
   text-align: center;
   text-justify: auto;
   margin: auto;
-  /* background-color: var(--my-lightgreen); */
+  background-color: whitesmoke;
   font-family: 'Oxygen', sans-serif;
 }
 
@@ -23,7 +23,7 @@ body {
 .ls-wrapper {
   max-width: 1100px;
   margin: auto;
-  border: solid 1px black;
+  /* border: solid 1px black; */
   justify-content: space-between;
 }
 
@@ -33,7 +33,12 @@ body {
   width: 100%;
   position: relative;
   /* padding-bottom: 60px; */
-  margin-bottom: 60px;
+  margin-bottom: 40px;
+}
+
+.empty-block {
+  height: 100px;
+  background-color: black;
 }
 
 /* ======================================================== */
@@ -96,9 +101,27 @@ body {
   src: url('../fonts/better-grade-font/BetterGrade-519DV.ttf');
 }
 
-@font-face {
-  font-family: 'AgreementSignature';
-  src: url('../fonts/a-agreement-signature-font/AgreementSignature-qZX6x.ttf');
+#blog-intro {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 100%;
+  /* margin: 0; */
+}
+
+#blog-intro img {
+  object-fit: cover;
+  width: 100%;
+  height: 350px;
+  filter: brightness(70%);
+  position: relative;
+}
+
+.index-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #logo-title {
@@ -111,32 +134,18 @@ body {
   text-decoration: none;
 }
 
-#blog-intro {
-  position: relative;
-  text-align: center;
-  color: white;
-  width: 100%;
-  /* margin: 0; */
-}
 
-.index-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#blog-intro img {
-  object-fit: cover;
-  width: 100%;
-  height: 350px;
-  filter: brightness(70%);
-}
 
 /* SECOND BLOCK - DESCRIPTIOn  */
 
+@font-face {
+  font-family: 'AgreementSignature';
+  src: url('../fonts/a-agreement-signature-font/AgreementSignature-qZX6x.ttf');
+}
+
 #blog-head {
   /* flex-wrap: wrap; */
+  /* background-color: #f5c6c6; */
 }
 
 #blog-head h2 {
@@ -149,18 +158,20 @@ body {
 
 #blog-head .half-page {
   flex: 50%;
-  padding: 10px;
   margin: auto;
 }
 
 #blog-head-text {
-  border: 2px red solid;
+  padding: 10px;
+  font-size: 1.2em;
+  /* border: 2px red solid; */
 }
 
 #blog-head img {
   width: 100%;
   object-fit: cover;
   scale: 90%;
+  /* margin: 0; */
 }
 
 .nice-text {
@@ -176,15 +187,86 @@ body {
 }
 
 
-/* BLOG QUOTE */
+/* BLOG TRAVEL */
 
-#blog-quote {
-  background-image: url('../images/SQCR2800.JPG');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  height: 500px;
+#blog-destinations {
+  /* background-color: var(--my-lightgreen); */
 }
+
+
+#blog-container {
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  flex-wrap: wrap;
+  border: 2px solid black;
+}
+
+.blog-box {
+  width: 250px;
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+  margin: 10px 10px;
+
+}
+
+.blog-img img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  transition: all .3s;
+  /* Animation */
+  margin: 0 auto;
+}
+
+.blog-img img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 11px black;
+}
+
+.blog-text {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-text span {
+  color: var(--my-green);
+  font-size: 0.9rem;
+}
+
+.blog-text .blog-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #272727;
+}
+
+.blog-text p {
+  color: #9b9b9b;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 20px 0px;
+  text-decoration: none;
+}
+
+.blog-text a {
+  color: #0f0f0f;
+  text-decoration: none;
+}
+
+.blog-text a:hover {
+  color: #c74242;
+  transition: all ease 0.3s;
+}
+
+
 
 
 /* BLOG PHOTO */
@@ -193,7 +275,31 @@ body {
   background-image: url('../images/salkantay.jpg');
   background-attachment: fixed;
   background-size: cover;
+  position: absolute;
   height: 500px;
+  filter: brightness(0.6);
+}
+
+#blog-photo .blog-block{
+}
+
+#blog-quote {
+  height: 500px;
+  background: none;
+  color: white;
+  font-size: 1.05em;
+}
+
+#blog-quote .ls-wrapper {
+  width: 85%;
+  top: 50%;
+  -ms-transform: translateY(40%);
+  transform: translateY(40%); 
+}
+
+#blog-photo p {
+  margin: 0;
+  padding: 0;
 }
 
 /* END MAIN CONTENT */
@@ -210,6 +316,19 @@ body {
 #chartdiv {
   width: 100%;
   height: 650px;
+}
+
+#travel-nav {
+  background-color: black;
+  /* padding: 0px 100px; */
+  margin: 0;
+  background-color: black;
+  text-transform: uppercase;
+}
+
+.dropdown-item {
+  background-color: black;
+  color: white;
 }
 
 /* END TRAVEL.HTML */
@@ -237,111 +356,6 @@ body {
 
 /* ======================================================== */
 
-
-
-/* FOOTER */
-
-.wrap-footer {
-  padding-top: 35px;
-  background-color: black;
-  color: white;
-  margin: auto;
-  font-style: italic;
-}
-
-#wrap-socials {
-  padding: 0 20px;
-  margin: auto;
-  background-color: black;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.social,
-.social:hover,
-.social-icon:hover,
-.social-icon a:link,
-.social-icon a:focus {
-  color: inherit;
-  text-decoration: none;
-}
-
-.fa-brands {
-  padding-bottom: 15px;
-  text-decoration: none;
-  color: inherit;
-}
-
-.fa-instagram {
-  /* color: #C13584; */
-}
-
-.fa-youtube {
-  /* color: #FF0000; */
-}
-
-.fa-whatsapp {
-  /* color: #075e54; */
-}
-
-footer hr {
-  width: 30%;
-  margin: auto;
-  /* height: 20px; */
-  border-width: 2px;
-  color: white;
-  opacity: 1;
-}
-
-.mycopyright {
-  font-size: 0.6em;
-  margin-top: 10px;
-  padding-bottom: 15px;
-}
-
-/* END FOOTER */
-
-
-
-
-
-/****************************************** Large devices only ******************************************/
-@media (min-width: 1200px) {}
-
-/****************************************** Medium devices only ******************************************/
-@media (min-width: 992px) and (max-width: 1199px) {}
-
-/****************************************** Small devices only ******************************************/
-@media (min-width: 768px) and (max-width: 991px) {}
-
-/****************************************** Extra small devices only ******************************************/
-@media (max-width: 576px) and (max-width: 767px) {
-
-  .li-selected {
-    text-decoration: underline;
-  }
-
-  .panel-footer section {
-    text-align: center;
-  }
-
-  .panel-footer section hr {
-    width: 50%;
-  }
-
-  .panel-footer {
-    font-size: 11px;
-  }
-
-}
-
-/****************************************** XX-small devices only ******************************************/
-@media (max-width: 575px) {}
-
-
-
-
-
 /* ================= ABOUT ME  ================= */
 
 #contain-about {
@@ -364,6 +378,249 @@ footer hr {
 }
 
 /* ================= END ABOUT ME  ================= */
+
+
+
+/* FOOTER */
+
+.wrap-footer {
+  padding-top: 35px;
+  background-color: black;
+  color: white;
+  margin: auto;
+  font-style: italic;
+}
+
+#wrap-socials {
+  padding: 0 20px;
+  margin: auto;
+  background-color: black;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* .social-icon a:link, */
+/* .social-icon a:focus */
+.social {
+  color: inherit;
+  text-decoration: none;
+}
+
+.fa-brands {
+  padding-bottom: 15px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.fa-instagram:hover {
+  color: #C13584;
+}
+
+.fa-youtube:hover {
+  color: #FF0000;
+}
+
+.fa-whatsapp:hover {
+  color: #075e54;
+}
+
+footer hr {
+  width: 30%;
+  margin: auto;
+  /* height: 20px; */
+  border-width: 2px;
+  color: white;
+  opacity: 1;
+}
+
+.mycopyright {
+  font-size: 0.6em;
+  margin-top: 10px;
+  padding-bottom: 15px;
+}
+
+
+
+.newfooter {
+      display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    background: #000;
+    /* margin-bottom: 100px; */
+}
+
+.newfooter ul {
+  position: relative;
+  display: flex;
+  /* padding: 0; */
+  margin: 0;
+}
+.newfooter ul li {
+  position: relative;
+  list-style: none;
+  margin: 0 20px;
+  cursor: pointer;
+  /* margin: 0; */
+}
+
+.newfooter ul li a {
+  text-decoration: none;
+  margin: 0;
+}
+
+.newfooter ul li a .fa-brands {
+  font-size: 6em;
+  color: #222;
+  overflow: hidden;
+  padding: 0;
+}
+.newfooter ul li a::before {
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 6em;
+  height: 0;
+  margin: 0;
+  /* overflow: hidden; */
+  transition: 0.4s ease-in-out;
+}
+
+.newfooter ul li:nth-child(1) a::before {
+  content: "\f16d";
+  background-image: linear-gradient(45deg, 
+    #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,
+    #bc1888 100%);
+  -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+  border-bottom: 4px solid #cc2366;
+}
+
+.newfooter ul li:nth-child(2) a::before {
+  content: "\f232";
+  color: #25D366;
+  border-bottom: 4px solid #25D366;
+}
+
+.newfooter ul li:nth-child(3) a::before {
+  content: "\f16a";
+  color: #FF0000;
+  border-bottom: 4px solid #FF0000;
+}
+
+.newfooter ul li:hover a::before {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* END FOOTER */
+
+
+
+
+
+/****************************************** Large devices only ******************************************/
+@media (min-width: 1200px) {
+  .ls-wrapper {
+    max-width: 1100px;
+}
+
+.blog-box {
+    width: 300px;
+}
+  
+  #blog-head-text {
+    font-size: 1.4em;
+  }
+}
+
+/****************************************** Medium devices only ******************************************/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .ls-wrapper {
+    max-width: 900px;
+}
+
+.blog-box {
+    width: 45%;
+}
+
+  #blog-head-text {
+    font-size: 1.2em;
+  }
+
+}
+
+/****************************************** Small devices only ******************************************/
+@media (min-width: 768px) and (max-width: 991px) {
+  .ls-wrapper {
+    max-width: 90%;
+}
+
+#blog-container {
+    justify-content: center;
+}
+
+.blog-box {
+    margin: 20px 10px;
+    width: 45%;
+}
+
+  
+  #blog-head-text {
+    font-size: 0.9em;
+  }
+}
+
+/****************************************** Extra small devices only ******************************************/
+@media (max-width: 576px) and (max-width: 767px) {
+
+  .ls-wrapper {
+    max-width: 90%;
+}
+
+#blog-container {
+    justify-content: center;
+}
+
+.blog-box {
+    margin: 20px 10px;
+    width: 90%;
+}
+
+  #blog-head-text {
+    font-size: 0.4em;
+  }
+
+  .li-selected {
+    text-decoration: underline;
+  }
+
+  .panel-footer section {
+    text-align: center;
+  }
+
+  .panel-footer section hr {
+    width: 50%;
+  }
+
+  .panel-footer {
+    font-size: 11px;
+  }
+
+}
+
+/****************************************** XX-small devices only ******************************************/
+@media (max-width: 575px) {
+  #blog-head-text {
+    font-size: 0.4em;
+  }
+}
+
+
+
+
 
 
 /* ================= CONTACT ME ================= */

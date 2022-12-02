@@ -23,7 +23,7 @@ var root = am5.Root.new("chartdiv");
 var color_map = 0x2F3C42; // dark grey
 var color_visitedCountry = 0xB49509; // dark yellow
 var color_hover = 0x677935; // darker yellow
-var color_background = 0x050c37; // dark blue
+var color_background = 0xffffff; // dark blue
 
 // Set themes
 root.setThemes([
@@ -36,6 +36,7 @@ var chart = root.container.children.push(
         homeZoomLevel: 1.,
         projection: am5map.geoNaturalEarth1(),
         wheelY: "none",
+        zoomOnDoubleClick: "true",
         maxPanOut: 0.0
     })
 );
@@ -46,7 +47,6 @@ chart.appear(1000, 100);
 // Background
 chart.chartContainer.set("background", am5.Rectangle.new(root, {
     fill: am5.color(color_background),
-    fill: am5.color(0xffffff),
     fillOpacity: 1
 }));
 
@@ -106,6 +106,10 @@ chart.events.on("wheel", function (ev) {
 });
 // end message overlay
 
+chart.events.on("hit", function (ev) {
+    ev.target.series.chart.zoomToMapObject(ev.target)
+    // chart.set("click", "zoom");
+});
 
 // Create polygon series
 var polygonSeries = chart.series.push(

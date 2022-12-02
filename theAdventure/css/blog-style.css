@@ -1,6 +1,6 @@
 /* BLOG HOME */
 
-#blog {
+/* #blog {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,81 +8,9 @@
     padding: 40px;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
+} */
 
 
-.blog-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
-    flex-wrap: wrap;
-}
-
-
-.blog-box {
-    width: 250px;
-    background-color: #ffffff;
-    border: 1px solid #ececec;
-    margin: 10px 10px;
-
-}
-
-.blog-img {}
-
-.blog-img img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    object-position: center;
-    transition: all .3s;
-    /* Animation */
-    margin: 0 auto;
-}
-
-.blog-img img:hover {
-    transform: scale(1.01);
-    box-shadow: 0 0 11px black;
-}
-
-.blog-text {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-.blog-text span {
-    color: var(--my-green);
-    font-size: 0.9rem;
-}
-
-.blog-text .blog-title {
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: #272727;
-}
-
-.blog-text p {
-    color: #9b9b9b;
-    font-size: 0.9rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 20px 0px;
-    text-decoration: none;
-}
-
-.blog-text a {
-    color: #0f0f0f;
-    text-decoration: none;
-}
-
-.blog-text a:hover {
-    color: #c74242;
-    transition: all ease 0.3s;
-}
 
 
 /* MY BLOG CSS */
@@ -90,20 +18,11 @@
 
 
 
-#blog-container {
-    width: 1100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    flex-wrap: wrap;
-}
 
-#blog-break {
+/* #blog-break {
     background-color: var(--my-green);
-    /* height: 100px; */
     margin-bottom: 40px;
-}
+} */
 
 
 
@@ -111,32 +30,8 @@
     background-color: var(--my-green);
     border-radius: 0;
     border: 0;
-    padding: 10spx;
+    padding: 10px;
 }
-
-
-
-.navbar-brand {
-    font-family: 'myTitleFont';
-    color: #000;
-    text-shadow: 1px 1px 1px #fff;
-    font-size: 5.5em;
-    font-style: italic;
-    text-align: center;
-    /* padding: 10px; */
-    /* text-decoration: none; */
-}
-
-/* Remove blue link colors and highlight */
-/* .navbar-brand:link, */
-.navbar-brand:hover,
-.navbar-brand:focus {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.642);
-}
-
-/* END Website name */
-
 
 
 /* Icon Menu */
@@ -175,70 +70,30 @@
     /* height: 3px !important; */
 }
 
-.fa-solid,
-.fa-regular {
-    padding-bottom: 10px;
-}
+/* .fa-solid, */
+/* .fa-regular { */
+    /* padding-bottom: 10px; */
+/* } */
 
 
 /****************************************** Large devices only ******************************************/
 @media (min-width: 1200px) {
 
-    .ls-wrapper {
-        max-width: 1100px;
-    }
 
-    .blog-box {
-        width: 300px;
-    }
 }
 
 /****************************************** Medium devices only ******************************************/
 @media (min-width: 992px) and (max-width: 1199px) {
 
-    .ls-wrapper {
-        max-width: 900px;
-    }
 
-    .blog-box {
-        width: 45%;
-    }
 }
 
 /****************************************** Small devices only ******************************************/
 @media (min-width: 768px) and (max-width: 991px) {
 
-    .ls-wrapper {
-        max-width: 90%;
-    }
-
-    #blog-container {
-        justify-content: center;
-    }
-
-    .blog-box {
-        margin: 20px 10px;
-        width: 45%;
-    }
-
-
 }
 
 /****************************************** Extra small devices only ******************************************/
 @media (max-width: 767px) {
-
-    .ls-wrapper {
-        max-width: 90%;
-    }
-
-    #blog-container {
-        justify-content: center;
-    }
-
-    .blog-box {
-        margin: 20px 10px;
-        width: 90%;
-    }
-
 
 }
