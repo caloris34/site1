@@ -76,30 +76,39 @@
     text-decoration: none;
     color: white;
     cursor: pointer;
+    font-weight: 400;
   }
   
   .slide-title a:hover {
     color: gray;
   }
   
-  .img-1{
-    background-image: url(../pexels-roberto-nickson-2816168.jpg);
+  .img-andes{
+    background-image: url(../images/slider-andes.jpg);
   }
   
-  .img-2{
-    background-image: url(../pexels-pixabay-356844.jpg);
+  .img-sweden{
+    background-image: url(../images/slider-sweden.jpg);
+  }
+
+  .img-andalusia{
+    background-image: url(../images/slider-andalusia.jpg);
   }
   
-  .img-3{
-    background-image: url(../pexels-pixabay-208745.jpg);
+  .img-mexico{
+    background-image: url(../images/slider-mexico.jpg);
+  }
+
+  .img-dolomites{
+    background-image: url(../images/slider-dolomites.jpg);
+  }
+
+  .img-norway{
+    background-image: url(../images/slider-norway.jpg);
   }
   
-  .img-4{
-    background-image: url(../pexels-samuel-karle-4194067.jpg);
-  }
-  
-  .img-5{
-    background-image: url(../pexels-chait-goli-2093318.jpg);
+  .img-bolivia{
+    background-image: url(../images/slider-uyuni.jpg);
   }
   
   @media(max-width:1600px){
