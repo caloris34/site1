@@ -38,12 +38,32 @@ a {
   display: inline-block;
   width: 100%;
   position: relative;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .empty-block {
   height: 100px;
   background-color: black;
+}
+
+.empty-white-block {
+  height: 10px;
+  background-color: whitesmoke;
+}
+
+@font-face {
+  font-family: 'AgreementSignature';
+  src: url('../fonts/a-agreement-signature-font/AgreementSignature-qZX6x.ttf');
+}
+
+@font-face {
+  font-family: 'myFont';
+  src: url('../fonts/knight_vision/Knight_Vision.otf');
+}
+
+@font-face {
+  font-family: 'myTitleFont';
+  src: url('../fonts/better-grade-font/BetterGrade-519DV.ttf');
 }
 
 /* ======================================================== */
@@ -55,8 +75,14 @@ a {
 .wrap-mainnav {
   padding: 0px 100px;
   margin: 0;
-  background-color: black;
   text-transform: uppercase;
+}
+
+.home-header {
+  background-image: url(../images/Lightroom/DJI_0011.jpg);
+  height: 950px;
+  background-position: center;
+  background-size: cover;s
 }
 
 #main-nav {
@@ -64,6 +90,7 @@ a {
 
 .wrap-mainnav ul {
   display: flex;
+  background: transparent;
   align-items: stretch;
   justify-content: space-between;
   width: 80%;
@@ -72,7 +99,8 @@ a {
 }
 
 .wrap-mainnav ul li a:hover {
-  background: rgb(58, 58, 58);
+  /* background: rgb(212, 212, 212); */
+  text-decoration:line-through;
 }
 
 .wrap-mainnav ul li {
@@ -85,10 +113,10 @@ a {
   display: block;
   margin: auto;
   padding: 10px 10px;
-  color: white;
+  color: black;
+  font-size: 1.4em;
   text-decoration: none;
   font-weight: 300;
-  /* background-color: transparent; */
   /* font-family: sans-serif; */
 }
 
@@ -103,10 +131,7 @@ a {
 /* FIRST BLOCK - TITLE  */
 
 /* Website name */
-@font-face {
-  font-family: 'myTitleFont';
-  src: url('../fonts/better-grade-font/BetterGrade-519DV.ttf');
-}
+
 
 #blog-intro {
   position: relative;
@@ -114,7 +139,7 @@ a {
   /* place-items: center; */
   /* text-align: center; */
   width: 100%;
-  height: 350px;
+  height: 900px;
 }
 
 #blog-intro::before {
@@ -123,19 +148,22 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-image: url(../images/DJI_waves.jpg);
+  height: 900px;
+  /* background-image: url(../images/DJI_waves.jpg); */
+  background-image: url(../images/Lightroom/DJI_0011.jpg);
   background-position: center;
   background-size: cover;
-  filter:brightness(0.7)
+  /* filter:brightness(0.7) */
 }
 
 #intro-title {
   position: absolute;
+  /* background-color: ; */
   text-align: right;
   bottom: 0;
   right: 0;
-  margin-right: 30px;
+  /* margin-right: 30px; */
+  padding-right: 30px;
 }
 
 h1 {
@@ -158,49 +186,94 @@ h1 {
   text-align: left;
 }
 
+#msg-1 {
+  padding: 60px;
+  text-align: center;
+  font-style: italic;
+  background-color: #000;
+  color: white;
+}
+
+h2 {
+  /* font-family: 'myFont'; */
+  font-size: 4em;
+  text-transform: uppercase;
+}
+
+
 /* SECOND BLOCK - DESCRIPTIOn  */
 
-@font-face {
-  font-family: 'AgreementSignature';
-  src: url('../fonts/a-agreement-signature-font/AgreementSignature-qZX6x.ttf');
+.wide-photo {
+  width: 100%;
+  /* position: absolute; */
+  /* background-attachment: fixed; */
+  height: 800px;
 }
 
-#blog-head {
-  /* font-size: 1.2em; */
-  /* flex-wrap: wrap; */
-  /* background-color: #f5c6c6; */
-}
-
-#blog-head h2 {
-  text-align: center;
+#blog-head.row{
 }
 
 #blog-head .ls-wrapper {
-  display: flex;
 }
 
-#blog-head .half-page {
+.half-page {
   flex: 50%;
-  margin: auto;
 }
 
-#blog-head-text {
-  padding: 10px;
-  border: 2px red solid;
+#blog-head-text{
+  padding: 0 100px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-#blog-head img {
+#blog-head-text p{
+}
+
+#blog-head-img {
   width: 100%;
+  padding: 20px;
+}
+
+#blog-head-img img {
+  width: 80%;
   object-fit: cover;
-  scale: 90%;
-  /* margin: 0; */
+  padding: 0;
+  padding-right: 90px;
+  /* scale: 80%; */
 }
 
-.nice-text {
-  /* font-family: 'AgreementSignature'; */
-  /* font-size: 1.8em; */
+
+/* THIRD BLOCK - QUOTES */
+
+#blog-wonder {
+  background-image: url('../images/salkantay.jpg');
+  /* background-attachment: fixed; */
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  /* filter: brightness(0.6); */
 }
 
+#blog-quote {
+  position: relative;
+  height: 500px;
+  background: none;
+  color: black;
+  font-size: 1.05em;
+}
+
+#blog-quote p {
+  text-align: justify;
+}
+
+#blog-quote .ls-wrapper {
+  width: 85%;
+  top: 50%;
+  /* -ms-transform: translateY(0%); */
+  transform: translateY(20%); 
+}
 
 
 /* BLOG TRAVEL */
@@ -304,24 +377,7 @@ h1 {
 }
 
 
-#blog-quote {
-  position: relative;
-  height: 500px;
-  background: none;
-  color: white;
-  font-size: 1.05em;
-}
 
-#blog-quote p {
-  text-align: justify;
-}
-
-#blog-quote .ls-wrapper {
-  width: 85%;
-  top: 50%;
-  /* -ms-transform: translateY(0%); */
-  transform: translateY(20%); 
-}
 
 #blog-photo p {
   margin: 0;
@@ -397,12 +453,26 @@ h1 {
   /* border: solid blue; */
 }
 
+.rounded-corners {
+  border-radius: 50%;
+  width: 500px; 
+  height: 500px; 
+  object-fit: cover;
+}
+ 
+.rounded-corners img {
+  /* margin: -150px 0px 0px -150px; */
+}
+
 .my-description {
-  border: solid red;
+  /* border: solid red; */
+  width: 80%;
+  margin: auto;
+  font-size: 1.2em;
   font-style: italic;
-  text-align: justify;
+  /* text-align: justify; */
   text-justify: inter-word;
-  padding: 30px;
+  /* padding: 30px; */
 }
 
 .my-photo img {
@@ -459,7 +529,7 @@ h1 {
 }
 
 footer hr {
-  width: 30%;
+  width: 20%;
   margin: auto;
   /* height: 20px; */
   border-width: 2px;
@@ -468,7 +538,7 @@ footer hr {
 }
 
 .mycopyright {
-  font-size: 0.6em;
+  font-size: 0.7em;
   margin-top: 10px;
   padding-bottom: 15px;
 }
